@@ -2,11 +2,11 @@ package com.clickup.gui.steps;
 
 import com.clickup.gui.pages.LandingPage;
 
-public class LoginSteps {
+public class LandingPageSteps {
 
     LandingPage landingPage;
 
-    public void openLoginForm() {
-        landingPage.clickLogin();
+    public void open() {
+        landingPage.open();
     }
 }
