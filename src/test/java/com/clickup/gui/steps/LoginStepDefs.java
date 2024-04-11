@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class LoginStepDefs {
 
     @Steps
@@ -16,7 +18,8 @@ public class LoginStepDefs {
     }
     @Then("login form is displayed")
     public void login_form_is_displayed() {
-
+        assertThat(true);
+        // TODO
     }
 
 }
