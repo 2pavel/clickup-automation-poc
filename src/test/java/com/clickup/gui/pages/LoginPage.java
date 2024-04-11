@@ -11,4 +11,12 @@ public class LoginPage extends PageObject {
 
     @FindBy(css = ".login-page-new__main-form")
     private WebElementFacade loginMainForm;
+
+    public WebElementFacade getPageTitle() {
+        return pageTitle;
+    }
+
+    public WebElementFacade getLoginMainForm() {
+        return loginMainForm;
+    }
 }
