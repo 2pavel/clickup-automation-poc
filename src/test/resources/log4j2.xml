@@ -3,7 +3,7 @@
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout
-                pattern="[ %-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %C - %style{%msg}{black BG_Blue} %style{%n}{Normal}" disableAnsi="false"/>
+                pattern="[ %-5level ] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %C - %style{%msg}{black BG_Blue} %style{%n}{Normal}" disableAnsi="false"/>
         </Console>
     </Appenders>
     <Loggers>
