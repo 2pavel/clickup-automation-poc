@@ -37,6 +37,8 @@ public class LoginStepDefs {
         loginPage.getLoginField().type(Constants.getLogin());
         loginPage.getPasswordField().type(Constants.getPassword());
         loginPage.getLoginBtn().click();
+        // TODO: implement properties for login and password
+        // TODO: create common GUI methods
     }
 
     @Then("Home page is displayed")
@@ -44,6 +46,7 @@ public class LoginStepDefs {
         assertThat(homePage.getUserAvatar().isDisplayed())
                 .as("User avatar should be display but wasn't!")
                 .isTrue();
+        // TODO: move and verify more page elements
     }
 
 }
