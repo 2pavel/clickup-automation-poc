@@ -20,4 +20,7 @@ public class LoginPage extends PageObject {
     @FindBy(css = "#login-password-input")
     private WebElementFacade passwordField;
 
+    @FindBy(css = "[data-test=login-submit]")
+    private WebElementFacade loginBtn;
+
 }

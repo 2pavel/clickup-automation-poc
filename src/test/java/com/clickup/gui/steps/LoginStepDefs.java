@@ -1,6 +1,7 @@
 package com.clickup.gui.steps;
 
 import com.clickup.commons.Constants;
+import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,6 +16,8 @@ public class LoginStepDefs {
     LoginSteps loginSteps;
 
     LoginPage loginPage;
+
+    HomePage homePage;
 
     @When("I click login button")
     public void i_click_login_button() {
@@ -33,12 +36,14 @@ public class LoginStepDefs {
     public void i_sign_in_as_user() {
         loginPage.getLoginField().type(Constants.getLogin());
         loginPage.getPasswordField().type(Constants.getPassword());
+        loginPage.getLoginBtn().click();
     }
 
     @Then("Home page is displayed")
     public void home_page_is_displayed() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
+        assertThat(homePage.getUserAvatar().isDisplayed())
+                .as("User avatar should be display but wasn't!")
+                .isTrue();
     }
 
 }
