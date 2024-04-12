@@ -30,8 +30,7 @@ public class LoginStepDefs {
 
     @When("I sign in as user")
     public void i_sign_in_as_user() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        loginPage.getLoginField().sendKeys("test");
     }
 
     @Then("Home page is displayed")
