@@ -23,7 +23,7 @@ public class LoginStepDefs {
     @Then("login form is displayed")
     public void login_form_is_displayed() {
         assertThat(loginPage.getLoginMainForm().isDisplayed())
-                .as("Login form should be displayed")
+                .as("Login form should be displayed but wasn't!")
                 .isTrue();
     }
 
