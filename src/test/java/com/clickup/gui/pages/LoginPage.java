@@ -20,19 +20,4 @@ public class LoginPage extends PageObject {
     @FindBy(css = "#login-password-input")
     private WebElementFacade passwordField;
 
-//    public WebElementFacade getLoginField() {
-//        return loginField;
-//    }
-//
-//    public WebElementFacade getPasswordField() {
-//        return passwordField;
-//    }
-//
-//    public WebElementFacade getPageTitle() {
-//        return pageTitle;
-//    }
-//
-//    public WebElementFacade getLoginMainForm() {
-//        return loginMainForm;
-//    }
 }
