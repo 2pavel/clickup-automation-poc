@@ -25,6 +25,19 @@ public class LoginStepDefs {
         assertThat(loginPage.getLoginMainForm().isDisplayed())
                 .as("Login form should be displayed but wasn't!")
                 .isTrue();
+        // TODO: move assertions
+    }
+
+    @When("I sign in as user")
+    public void i_sign_in_as_user() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("Home page is displayed")
+    public void home_page_is_displayed() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
     }
 
 }
