@@ -1,9 +1,11 @@
 package com.clickup.gui.pages;
 
+import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
+@Getter
 public class LoginPage extends PageObject {
 
     @FindBy(css = ".login-page-new__main-form")
@@ -18,19 +20,19 @@ public class LoginPage extends PageObject {
     @FindBy(css = "#login-password-input")
     private WebElementFacade passwordField;
 
-    public WebElementFacade getLoginField() {
-        return loginField;
-    }
-
-    public WebElementFacade getPasswordField() {
-        return passwordField;
-    }
-
-    public WebElementFacade getPageTitle() {
-        return pageTitle;
-    }
-
-    public WebElementFacade getLoginMainForm() {
-        return loginMainForm;
-    }
+//    public WebElementFacade getLoginField() {
+//        return loginField;
+//    }
+//
+//    public WebElementFacade getPasswordField() {
+//        return passwordField;
+//    }
+//
+//    public WebElementFacade getPageTitle() {
+//        return pageTitle;
+//    }
+//
+//    public WebElementFacade getLoginMainForm() {
+//        return loginMainForm;
+//    }
 }
