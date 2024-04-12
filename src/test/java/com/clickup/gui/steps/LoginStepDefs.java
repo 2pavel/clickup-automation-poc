@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Constants;
 import com.clickup.gui.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -30,13 +31,14 @@ public class LoginStepDefs {
 
     @When("I sign in as user")
     public void i_sign_in_as_user() {
-        loginPage.getLoginField().sendKeys("test");
+        loginPage.getLoginField().type(Constants.getLogin());
+        loginPage.getPasswordField().type(Constants.getPassword());
     }
 
     @Then("Home page is displayed")
     public void home_page_is_displayed() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+//        throw new io.cucumber.java.PendingException();
     }
 
 }
