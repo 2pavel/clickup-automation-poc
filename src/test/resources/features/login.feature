@@ -6,3 +6,9 @@ Feature: Login
     Given I am on base page
     When I click login button
     Then login form is displayed
+
+  Scenario: Log in
+    Given I am on base page
+    When I click login button
+    And I sign in as user
+    Then Home page is displayed
