@@ -1,6 +1,6 @@
 # language: en
 
-Feature: Sample feature
+Feature: Login
 
   Scenario: Navigate to login page
     Given I am on base page
