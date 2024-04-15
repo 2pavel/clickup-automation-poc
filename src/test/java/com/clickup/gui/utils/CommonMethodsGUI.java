@@ -15,6 +15,11 @@ public class CommonMethodsGUI {
         javascriptExecutor.executeScript("arguments[0].style.backgroundColor = 'lightblue'", element);
     }
 
+    public static void scrollToElement(WebElementFacade element) {
+        javascriptExecutor = (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView(true)", element);
+    }
+
     public static void clickOnElement(WebElementFacade element) {
         element.waitUntilClickable();
         markElementWithColor(element);
