@@ -27,6 +27,7 @@ public class Actors {
             users = readUsers();
         }
         if (!users.containsKey(userLastName)) {
+            System.out.println(users);
             throw new IllegalArgumentException("Could not find user with last name: " + userLastName);
         }
         return users.get(userLastName);

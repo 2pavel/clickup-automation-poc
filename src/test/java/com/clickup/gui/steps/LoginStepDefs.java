@@ -22,8 +22,8 @@ public class LoginStepDefs {
     }
 
     @When("I sign in as user {string}")
-    public void i_sign_in_as_user(String user) {
-        loginSteps.loginToApplication();
+    public void i_sign_in_as_user(String userLastName) {
+        loginSteps.loginToApplication(userLastName);
         // TODO: implement properties for login and password
     }
 
