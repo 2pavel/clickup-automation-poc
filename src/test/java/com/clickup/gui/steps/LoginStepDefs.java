@@ -1,7 +1,5 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Constants;
-import com.clickup.gui.pages.LoginPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
@@ -22,9 +20,8 @@ public class LoginStepDefs {
     }
 
     @When("I sign in as user {string}")
-    public void i_sign_in_as_user(String userLastName) {
-        loginSteps.loginToApplication(userLastName);
-        // TODO: implement properties for login and password
+    public void i_sign_in_as_user(String username) {
+        loginSteps.loginToApplication(username);
     }
 
     @Then("Home page is displayed")

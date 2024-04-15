@@ -8,10 +8,4 @@ public class Constants {
     public static final String TESTDATA_DIR = RESOURCES_DIR + "/testdata";
     public static final String ACTORS_FILE = TESTDATA_DIR + "/actors.json";
 
-    @Getter
-    public static final String login = "";
-
-    @Getter
-    public static final String password = "";
-    // TODO: handle login and password
 }

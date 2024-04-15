@@ -1,6 +1,5 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Constants;
 import com.clickup.commons.pojo.Actors;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
@@ -20,14 +19,12 @@ public class LoginSteps extends TestBase {
         landingPage.clickLogin();
     }
 
-    public void loginToApplication(String userLastName) {
-//        loginPage.getLoginField().type(Constants.getLogin());
-//        loginPage.getPasswordField().type(Constants.getPassword());
-
-        enterUserEmail(userLastName);
-        enterUserPassword(userLastName);
+    public void loginToApplication(String username) {
+        enterUserEmail(username);
+        enterUserPassword(username);
 
         loginPage.getLoginBtn().click();
+        // TODO: Cleanup, maybe change String username to User object
     }
 
     public void enterUserEmail(String userLastName) {
