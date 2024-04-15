@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Constants;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.LandingPage;
@@ -16,6 +17,12 @@ public class LoginSteps extends TestBase {
     public void openLoginForm() {
         log().info("Clicking login button");
         landingPage.clickLogin();
+    }
+
+    public void loginToApplication() {
+        loginPage.getLoginField().type(Constants.getLogin());
+        loginPage.getPasswordField().type(Constants.getPassword());
+        loginPage.getLoginBtn().click();
     }
 
     public void assertThatLoginFormIsDisplayed() {
