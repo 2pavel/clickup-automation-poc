@@ -13,4 +13,5 @@ public class Constants {
 
     @Getter
     public static final String password = "";
+    // TODO: handle login and password
 }
