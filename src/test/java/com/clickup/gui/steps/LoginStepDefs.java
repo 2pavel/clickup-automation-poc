@@ -26,10 +26,7 @@ public class LoginStepDefs {
 
     @Then("login form is displayed")
     public void login_form_is_displayed() {
-        assertThat(loginPage.getLoginMainForm().isDisplayed())
-                .as("Login form should be displayed but wasn't!")
-                .isTrue();
-        // TODO: move assertions
+        loginSteps.assertThatLoginFormIsDisplayed();
     }
 
     @When("I sign in as user")
@@ -43,10 +40,7 @@ public class LoginStepDefs {
 
     @Then("Home page is displayed")
     public void home_page_is_displayed() {
-        assertThat(homePage.getUserAvatar().isDisplayed())
-                .as("User avatar should be display but wasn't!")
-                .isTrue();
-        // TODO: move and verify more page elements
+        loginSteps.assertThatHomePageIsDisplayed();
     }
 
 }

@@ -25,4 +25,9 @@ public class CommonMethodsGUI {
         markElementWithColor(element);
         element.click();
     }
+
+    public static boolean isElementDisplayed(WebElementFacade element) {
+        markElementWithColor(element);
+        return element.isDisplayed();
+    }
 }
