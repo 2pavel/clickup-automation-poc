@@ -12,7 +12,7 @@ public class Actors {
 
     private static Map<String, CfgUsers.CfgUser> readUsers() {
         try {
-            String userNode = JsonUtils.getJsonNode("users");
+            String userNode = JsonUtils.getUserJsonNode("users");
             ObjectMapper mapper = new ObjectMapper();
             CfgUsers pojoUsers = mapper.readValue(userNode, CfgUsers.class);
             return pojoUsers.getUsers();
@@ -22,14 +22,14 @@ public class Actors {
         }
     }
 
-    public static CfgUsers.CfgUser getUserByLastName(String userLastName) {
+    public static CfgUsers.CfgUser getUserByLastName(String username) {
         if (users == null) {
             users = readUsers();
         }
-        if (!users.containsKey(userLastName)) {
+        if (!users.containsKey(username)) {
             System.out.println(users);
-            throw new IllegalArgumentException("Could not find user with last name: " + userLastName);
+            throw new IllegalArgumentException("Could not find user with last name: " + username);
         }
-        return users.get(userLastName);
+        return users.get(username);
     }
 }
