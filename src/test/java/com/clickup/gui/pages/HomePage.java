@@ -20,4 +20,9 @@ public class HomePage extends PageObject {
     @FindBy(css = "[data-test=simple-sidebar]")
     private WebElementFacade leftSidebar;
 
+    @FindBy(css = "[data-test^=location-header__views]")
+    private WebElementFacade locationHeaderBar;
+
+    @FindBy(css = "[data-test^=dashboard__body]")
+    private WebElementFacade dashboard;
 }

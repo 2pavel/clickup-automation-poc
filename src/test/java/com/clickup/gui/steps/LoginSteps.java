@@ -5,6 +5,7 @@ import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.LandingPage;
 import com.clickup.gui.pages.LoginPage;
+import org.assertj.core.api.SoftAssertions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -45,9 +46,26 @@ public class LoginSteps extends TestBase {
 
     public void assertThatHomePageIsDisplayed() {
         log().info("Checking if home page elements are displayed");
-        assertThat(homePage.getUserAvatar().isDisplayed())
-                .as("User avatar should be display but wasn't!")
+        SoftAssertions softly = new SoftAssertions();
+
+        softly.assertThat(homePage.getUserAvatar().isDisplayed())
+                .as("User avatar should be displayed but wasn't!")
                 .isTrue();
-        // TODO: expand
+        softly.assertThat(homePage.getTopPageBar().isDisplayed())
+                .as("Top page bar with search input should be displayed but wasn't!")
+                .isTrue();
+        softly.assertThat(homePage.getWorkspaceTitleDropdown().isDisplayed())
+                .as("Workspace title should be displayed but wasn't!")
+                .isTrue();
+        softly.assertThat(homePage.getLeftSidebar().isDisplayed())
+                .as("Left sidebar should be displayed but wasn't!")
+                .isTrue();
+        softly.assertThat(homePage.getLocationHeaderBar().isDisplayed())
+                .as("Header bar with location breadcrumbs should be displayed but wasn't!")
+                .isTrue();
+        softly.assertThat(homePage.getDashboard().isDisplayed())
+                .as("Main dashboard should be displayed but wasn't!")
+                .isTrue();
+        softly.assertAll();
     }
 }
