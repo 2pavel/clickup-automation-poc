@@ -11,4 +11,4 @@ Feature: Login
     Given I am on base page
     When I click login button
     And I sign in as user "Testerski"
-    Then Home page is displayed
+    Then home page is displayed

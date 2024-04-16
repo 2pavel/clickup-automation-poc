@@ -24,7 +24,7 @@ public class LoginStepDefs {
         loginSteps.loginToApplication(username);
     }
 
-    @Then("Home page is displayed")
+    @Then("home page is displayed")
     public void home_page_is_displayed() {
         loginSteps.assertThatHomePageIsDisplayed();
     }

@@ -16,4 +16,6 @@ public class JsonUtils {
         JsonNode rootNode = mapper.readTree(actorsJson);
         return String.format("{\"%s\": %s }", node, rootNode.path(node).toString());
     }
+
+    // TODO: consider moving this class
 }
