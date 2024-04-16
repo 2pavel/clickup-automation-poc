@@ -22,7 +22,7 @@ public class Actors {
         }
     }
 
-    public static CfgUsers.CfgUser getUserByLastName(String username) {
+    public static CfgUsers.CfgUser getUserByUsername(String username) {
         if (users == null) {
             users = readUsers();
         }

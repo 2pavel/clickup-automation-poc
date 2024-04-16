@@ -23,4 +23,8 @@ public class LoginPage extends PageObject {
     @FindBy(css = "[data-test=login-submit]")
     private WebElementFacade loginBtn;
 
+    public void clickLogin() {
+        loginBtn.click();
+    }
+
 }

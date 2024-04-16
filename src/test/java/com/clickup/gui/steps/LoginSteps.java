@@ -20,21 +20,23 @@ public class LoginSteps extends TestBase {
     }
 
     public void loginToApplication(String username) {
-        enterUserEmail(username);
-        enterUserPassword(username);
-
-        loginPage.getLoginBtn().click();
-        // TODO: Cleanup, maybe change String username to User object
+        enterEmailOfUser(username);
+        enterPasswordOfUser(username);
+        clickLoginBtn();
     }
 
-    public void enterUserEmail(String userLastName) {
-        String email = Actors.getUserByLastName(userLastName).getEmail();
+    public void enterEmailOfUser(String userLastName) {
+        String email = Actors.getUserByUsername(userLastName).getEmail();
         loginPage.getLoginField().type(email);
     }
 
-    public void enterUserPassword(String userLastName) {
-        String password = Actors.getUserByLastName(userLastName).getPassword();
+    public void enterPasswordOfUser(String userLastName) {
+        String password = Actors.getUserByUsername(userLastName).getPassword();
         loginPage.getPasswordField().type(password);
+    }
+
+    public void clickLoginBtn() {
+        loginPage.clickLogin();
     }
 
     public void assertThatLoginFormIsDisplayed() {
