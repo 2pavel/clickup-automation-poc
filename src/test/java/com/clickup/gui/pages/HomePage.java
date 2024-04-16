@@ -10,4 +10,14 @@ public class HomePage extends PageObject {
 
     @FindBy(css = "[data-test=avatar]")
     private WebElementFacade userAvatar;
+
+    @FindBy(css = "cu-global-actions-bar")
+    private WebElementFacade topPageBar;
+
+    @FindBy(css = "[data-test^=simple-bar__workspace]")
+    private WebElementFacade workspaceTitleDropdown;
+
+    @FindBy(css = "[data-test=simple-sidebar]")
+    private WebElementFacade leftSidebar;
+
 }

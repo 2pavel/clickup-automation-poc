@@ -20,9 +20,10 @@ public class LoginSteps extends TestBase {
     }
 
     public void loginToApplication(String username) {
+        log().info("Attempting to enter login data for user {}", username);
         enterEmailOfUser(username);
         enterPasswordOfUser(username);
-        clickLoginBtn();
+        loginPage.clickLogin();
     }
 
     public void enterEmailOfUser(String userLastName) {
@@ -33,10 +34,6 @@ public class LoginSteps extends TestBase {
     public void enterPasswordOfUser(String userLastName) {
         String password = Actors.getUserByUsername(userLastName).getPassword();
         loginPage.getPasswordField().type(password);
-    }
-
-    public void clickLoginBtn() {
-        loginPage.clickLogin();
     }
 
     public void assertThatLoginFormIsDisplayed() {
