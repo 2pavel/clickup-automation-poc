@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
@@ -29,4 +30,8 @@ public class LoginStepDefs {
         loginSteps.assertThatHomePageIsDisplayed();
     }
 
+    @Given("I am logged in to the application")
+    public void iAmLoggedInToTheApplication() {
+        // TODO: implement
+    }
 }

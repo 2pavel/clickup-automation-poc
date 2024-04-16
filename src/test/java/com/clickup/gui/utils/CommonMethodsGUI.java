@@ -24,6 +24,7 @@ public class CommonMethodsGUI {
         element.waitUntilClickable();
         markElementWithColor(element);
         element.click();
+        // TODO: implement in test methods
     }
 
     public static boolean isElementDisplayed(WebElementFacade element) {
