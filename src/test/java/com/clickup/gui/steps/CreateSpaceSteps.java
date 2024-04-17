@@ -2,10 +2,13 @@ package com.clickup.gui.steps;
 
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.CreateSpaceModalPage;
+import com.clickup.gui.pages.SidebarPage;
 
 public class CreateSpaceSteps extends TestBase {
 
     CreateSpaceModalPage createSpaceModalPage;
+
+    SidebarPage sidebarPage;
 
     public void enterSpaceName() {
         // TODO: add space name to constants
@@ -18,5 +21,9 @@ public class CreateSpaceSteps extends TestBase {
 
     public void clickCreateSpaceBtn() {
         createSpaceModalPage.clickCreateSpaceBtn();
+    }
+
+    public void assertThatSpaceIsVisible(String spaceName) {
+        // TODO: implement
     }
 }

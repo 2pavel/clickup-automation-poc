@@ -18,6 +18,7 @@ public class CreateSpaceStepDefs {
 
     @Then("Newly created space is visible")
     public void newlyCreatedSpaceIsVisible() {
+        createSpaceSteps.assertThatSpaceIsVisible("TestSpace");
         // TODO: implement
     }
 }
