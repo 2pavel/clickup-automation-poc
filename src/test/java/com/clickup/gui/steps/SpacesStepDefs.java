@@ -4,21 +4,21 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.annotations.Steps;
 
-public class CreateSpaceStepDefs {
+public class SpacesStepDefs {
 
     @Steps
-    CreateSpaceSteps createSpaceSteps;
+    SpacesSteps spacesSteps;
 
     @And("go through space creation process")
     public void goThroughSpaceCreationProcess() {
-        createSpaceSteps.enterSpaceName();
-        createSpaceSteps.clickContinueBtn();
-        createSpaceSteps.clickCreateSpaceBtn();
+        spacesSteps.enterSpaceName();
+        spacesSteps.clickContinueBtn();
+        spacesSteps.clickCreateSpaceBtn();
     }
 
     @Then("Newly created space is visible")
     public void newlyCreatedSpaceIsVisible() {
-        createSpaceSteps.assertThatSpaceIsVisible("TestSpace");
+        spacesSteps.assertThatSpaceIsVisible("TestSpace");
         // TODO: implement
     }
 }
