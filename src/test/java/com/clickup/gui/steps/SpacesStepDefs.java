@@ -19,6 +19,8 @@ public class SpacesStepDefs {
     @Then("Newly created space is visible")
     public void newlyCreatedSpaceIsVisible() {
         spacesSteps.assertThatSpaceIsVisible("TestSpace");
-        // TODO: implement
+        // TODO: move name to constants or properties
     }
+
+
 }

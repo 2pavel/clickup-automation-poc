@@ -12,4 +12,10 @@ public class SidebarStepDefs {
     public void i_click_create_space_button() {
         sidebarSteps.clickCreateSpaceBtn();
     }
+
+
+    @When("I click on delete button in space context menu")
+    public void iClickOnDeleteButtonInSpaceContextMenu() {
+
+    }
 }

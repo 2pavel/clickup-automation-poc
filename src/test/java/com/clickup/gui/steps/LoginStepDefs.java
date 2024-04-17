@@ -33,5 +33,6 @@ public class LoginStepDefs {
     @Given("I am logged in to the application")
     public void iAmLoggedInToTheApplication() {
         // TODO: implement
+        // TODO: verify cucumber step generation (make it snake_case)
     }
 }
