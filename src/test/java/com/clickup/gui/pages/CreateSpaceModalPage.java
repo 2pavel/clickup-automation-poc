@@ -18,6 +18,13 @@ public class CreateSpaceModalPage extends PageObject {
     @FindBy(css = "[data-test=create-test-workflow__create-space-button]")
     private WebElementFacade createSpaceBtn;
 
+    @FindBy(css = "[data-test=create-space-workflow__modal-dialog]")
+    private WebElementFacade defineWorkflowDialog;
+
+    @FindBy(css = "[data-test=create-space-details__modal-dialog]")
+    private WebElementFacade createSpaceDialog;
+
+
     public void typeIntoSpaceNameInput(String text) {
         spaceNameInput.type(text);
     }
@@ -28,6 +35,7 @@ public class CreateSpaceModalPage extends PageObject {
 
     public void clickCreateSpaceBtn() {
         CommonMethodsGUI.clickOnElement(createSpaceBtn);
+        defineWorkflowDialog.waitUntilNotVisible();
     }
 
 }

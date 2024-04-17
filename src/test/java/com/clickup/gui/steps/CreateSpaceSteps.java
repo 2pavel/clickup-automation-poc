@@ -3,6 +3,10 @@ package com.clickup.gui.steps;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.CreateSpaceModalPage;
 import com.clickup.gui.pages.SidebarPage;
+import com.clickup.gui.utils.CommonMethodsGUI;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CreateSpaceSteps extends TestBase {
 
@@ -24,6 +28,9 @@ public class CreateSpaceSteps extends TestBase {
     }
 
     public void assertThatSpaceIsVisible(String spaceName) {
-        // TODO: implement
+        List<String> allSpaces = CommonMethodsGUI.getTextFromListOfElements(sidebarPage.getListOfSpaces());
+        assertThat(allSpaces.contains(spaceName))
+                .as("Space with name '" + spaceName + "' was not found!")
+                .isTrue();
     }
 }
