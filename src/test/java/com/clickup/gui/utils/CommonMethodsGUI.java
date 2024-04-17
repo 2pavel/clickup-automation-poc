@@ -4,6 +4,9 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static net.serenitybdd.core.Serenity.getDriver;
 
 public class CommonMethodsGUI {
@@ -30,5 +33,17 @@ public class CommonMethodsGUI {
     public static boolean isElementDisplayed(WebElementFacade element) {
         markElementWithColor(element);
         return element.isDisplayed();
+    }
+
+    public static String getTextFromElement(WebElementFacade element){
+        markElementWithColor(element);
+        return element.getText();
+    }
+
+    public static List<String> getTextFromListOfElements(List<WebElementFacade> elements) {
+        return elements.stream().map(element -> {
+            markElementWithColor(element);
+            return element.getText();
+        }).collect(Collectors.toList());
     }
 }
