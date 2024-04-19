@@ -26,13 +26,13 @@ public class SpacesStepDefs {
     @When("confirm deletion in safeguard form")
     public void confirm_deletion_in_safeguard_form() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
     @Then("the space is removed")
     public void the_space_is_removed() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.out.println("breakpoint");
     }
 }

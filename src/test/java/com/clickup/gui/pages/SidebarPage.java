@@ -27,6 +27,14 @@ public class SidebarPage extends PageObject {
         CommonMethodsGUI.clickOnElement(createSpaceBtn);
     }
 
-    public void click
+    public void clickSpaceSettingsBtn(String spaceNameCssLocatorByName) {
+        WebElementFacade settingsBtn = findBy(spaceNameCssLocatorByName);
+        CommonMethodsGUI.clickOnElement(settingsBtn);
+    }
+
+    private WebElementFacade findSpaceRowByName(String spaceName) {
+        return CommonMethodsGUI.getElementFromListByText(listOfSpacesWithNames, spaceName);
+    }
+
 
 }

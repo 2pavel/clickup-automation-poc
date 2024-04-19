@@ -1,7 +1,9 @@
 package com.clickup.gui.utils;
 
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
@@ -14,8 +16,8 @@ public class CommonMethodsGUI {
     private static JavascriptExecutor javascriptExecutor;
 
     public static void markElementWithColor(WebElementFacade element) {
-        javascriptExecutor = (JavascriptExecutor) getDriver();
-        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = 'lightblue'", element);
+//        javascriptExecutor = (JavascriptExecutor) getDriver();
+//        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = 'lightblue'", element);
     }
 
     public static void scrollToElement(WebElementFacade element) {
@@ -32,7 +34,7 @@ public class CommonMethodsGUI {
 
     public static void hoverOverElement(WebElementFacade element) {
         Actions actions = new Actions(getDriver());
-        actions.moveToElement(element);
+        actions.moveToElement(element).perform();
         markElementWithColor(element);
     }
 
@@ -61,5 +63,9 @@ public class CommonMethodsGUI {
         }
         return null;
         // TODO: handle it in a better way
+    }
+
+    public static String buildDataTestLocator(String base, String suffix) {
+        return "[data-test='" + base + suffix + "']";
     }
 }
