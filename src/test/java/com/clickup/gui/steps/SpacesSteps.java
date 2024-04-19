@@ -28,7 +28,7 @@ public class SpacesSteps extends TestBase {
     }
 
     public void assertThatSpaceIsVisible(String spaceName) {
-        List<String> allSpaces = CommonMethodsGUI.getTextFromListOfElements(sidebarPage.getListOfSpaces());
+        List<String> allSpaces = CommonMethodsGUI.getTextFromListOfElements(sidebarPage.getListOfSpacesWithNames());
         assertThat(allSpaces.contains(spaceName))
                 .as("Space with name '" + spaceName + "' was not found!")
                 .isTrue();

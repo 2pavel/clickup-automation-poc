@@ -18,10 +18,15 @@ public class SidebarPage extends PageObject {
     private List<WebElementFacade> listOfSpacesRows;
 
     @FindBy(css = "span[data-test^=project-row__name__]")
-    private List<WebElementFacade> listOfSpaces;
+    private List<WebElementFacade> listOfSpacesWithNames;
+
+    @FindBy(css = "[data-test^=project-row__ellipsis__]")
+    private List<WebElementFacade> listOfSpaceSettingsBtns;
 
     public void clickCreateSpaceBtn() {
         CommonMethodsGUI.clickOnElement(createSpaceBtn);
     }
+
+    public void click
 
 }

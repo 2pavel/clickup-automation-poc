@@ -2,7 +2,7 @@ package com.clickup.gui.utils;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,6 +30,12 @@ public class CommonMethodsGUI {
         // TODO: implement in test methods
     }
 
+    public static void hoverOverElement(WebElementFacade element) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(element);
+        markElementWithColor(element);
+    }
+
     public static boolean isElementDisplayed(WebElementFacade element) {
         markElementWithColor(element);
         return element.isDisplayed();
@@ -45,5 +51,15 @@ public class CommonMethodsGUI {
             markElementWithColor(element);
             return element.getText();
         }).collect(Collectors.toList());
+    }
+
+    public static WebElementFacade getElementFromListByText(List<WebElementFacade> listOfElements, String text) {
+        for (WebElementFacade element : listOfElements) {
+            if (element.containsText(text)) {
+                return element;
+            }
+        }
+        return null;
+        // TODO: handle it in a better way
     }
 }
