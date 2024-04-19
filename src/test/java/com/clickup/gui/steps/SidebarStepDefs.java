@@ -15,7 +15,7 @@ public class SidebarStepDefs {
 
 
     @When("I click on delete button in space context menu")
-    public void iClickOnDeleteButtonInSpaceContextMenu() {
-
+    public void i_click_on_delete_button_in_space_context_menu() {
+        // TODO: implement
     }
 }
