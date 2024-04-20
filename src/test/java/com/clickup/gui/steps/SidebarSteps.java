@@ -27,8 +27,7 @@ public class SidebarSteps extends TestBase {
         WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, "TestSpace");
         CommonMethodsGUI.hoverOverElement(spaceRow);
 
-        // TODO: hover worked but some elements were loaded after hover method was called
-        //       so ultimately, cursor was in the wrong spot
+        // TODO: hover fixed but not sure if it works consistently yet
 
         String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", "TestSpace");
         sidebarPage.clickSpaceSettingsBtn(btnLocator);

@@ -5,7 +5,6 @@ import com.clickup.gui.pages.CreateSpaceModalPage;
 import com.clickup.gui.pages.DeleteSpaceModalPage;
 import com.clickup.gui.pages.SidebarPage;
 import com.clickup.gui.utils.CommonMethodsGUI;
-import com.clickup.gui.utils.Wait;
 
 import java.util.List;
 
