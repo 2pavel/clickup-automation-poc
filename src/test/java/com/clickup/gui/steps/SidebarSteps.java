@@ -3,6 +3,7 @@ package com.clickup.gui.steps;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.SidebarPage;
 import com.clickup.gui.utils.CommonMethodsGUI;
+import com.clickup.gui.utils.Wait;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public class SidebarSteps extends TestBase {
 
     public void clickDeleteSpaceBtn(String spaceName) {
         List<WebElementFacade> allSpaces = sidebarPage.getListOfSpacesWithNames();
+        Wait.forAllListElementsToBeVisible(allSpaces);
+
         WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, "TestSpace");
         CommonMethodsGUI.hoverOverElement(spaceRow);
 
