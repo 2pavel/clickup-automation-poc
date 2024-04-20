@@ -13,11 +13,13 @@ import static net.serenitybdd.core.Serenity.getDriver;
 
 public class CommonMethodsGUI {
 
+    // TODO: add logger
+
     private static JavascriptExecutor javascriptExecutor;
 
     public static void markElementWithColor(WebElementFacade element) {
-//        javascriptExecutor = (JavascriptExecutor) getDriver();
-//        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = 'lightblue'", element);
+        javascriptExecutor = (JavascriptExecutor) getDriver();
+        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = 'lightblue'", element);
     }
 
     public static void scrollToElement(WebElementFacade element) {
