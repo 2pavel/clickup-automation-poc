@@ -29,7 +29,7 @@ public class SpacesStepDefs {
     public void confirm_deletion_in_safeguard_form() {
         // TODO: handle created and deleted space name in a better way
         spacesSteps.fillSafeguardForm("TestSpace");
-        spacesSteps.clickDeleteBtn();
+        spacesSteps.confirmDeletion();
     }
 
     @Then("the space is removed")

@@ -10,7 +10,7 @@ public class DeleteSpaceModalPage extends PageObject {
     @FindBy(css = "[data-test=form-field__box] > input")
     private WebElementFacade safeguardSpaceNameField;
 
-    @FindBy(css = "confirmation-modal__confirm-button")
+    @FindBy(css = "[data-test=confirmation-modal__confirm-button]")
     private WebElementFacade deleteBtn;
 
     @FindBy(css = "confirmation-modal__cancel-button")

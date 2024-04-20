@@ -34,7 +34,7 @@ public class SpacesSteps extends TestBase {
         deleteSpaceModalPage.typeIntoSafeguardInput(spaceName);
     }
 
-    public void clickDeleteBtn() {
+    public void confirmDeletion() {
         deleteSpaceModalPage.clickDeleteBtn();
     }
 
