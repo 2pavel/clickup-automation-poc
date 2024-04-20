@@ -1,11 +1,16 @@
 package com.clickup.gui.pages;
 
 import com.clickup.gui.utils.CommonMethodsGUI;
+import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.support.FindBy;
 
 public class DeleteSpaceModalPage extends PageObject {
+
+    @Getter
+    @FindBy(css = "cu-confirmation-modal[role=dialog]")
+    private WebElementFacade dialogWindow;
 
     @FindBy(css = "[data-test=form-field__box] > input")
     private WebElementFacade safeguardSpaceNameField;

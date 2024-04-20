@@ -16,8 +16,6 @@ public class SidebarSteps extends TestBase {
 
     SidebarSpaceCtxPage sidebarSpaceCtxPage;
 
-    DeleteSpaceModalPage deleteSpaceModalPage;
-
     public void clickCreateSpaceBtn() {
         sidebarPage.clickCreateSpaceBtn();
     }
