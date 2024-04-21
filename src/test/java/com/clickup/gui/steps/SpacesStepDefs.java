@@ -34,7 +34,6 @@ public class SpacesStepDefs {
 
     @Then("the space is removed")
     public void the_space_is_removed() {
-        System.out.println("breakpoint");
         spacesSteps.assertThatSpaceIsNotVisible("TestSpace");
         // TODO: handle created and deleted space name in a better way
     }
