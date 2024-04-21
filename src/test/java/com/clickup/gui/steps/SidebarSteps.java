@@ -2,7 +2,6 @@ package com.clickup.gui.steps;
 
 import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
-import com.clickup.gui.pages.DeleteSpaceModalPage;
 import com.clickup.gui.pages.SidebarPage;
 import com.clickup.gui.pages.SidebarSpaceCtxPage;
 import com.clickup.gui.utils.CommonMethodsGUI;

@@ -1,6 +1,5 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Labels;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 
