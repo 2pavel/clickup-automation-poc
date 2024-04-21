@@ -1,5 +1,6 @@
 package com.clickup.gui.pages;
 
+import com.clickup.gui.utils.CommonMethodsGUI;
 import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -24,7 +25,7 @@ public class LoginPage extends PageObject {
     private WebElementFacade loginBtn;
 
     public void clickLogin() {
-        loginBtn.click();
+        CommonMethodsGUI.clickOnElement(loginBtn);
     }
 
 }
