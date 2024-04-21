@@ -17,5 +17,4 @@ public class JsonUtils {
         return String.format("{\"%s\": %s }", node, rootNode.path(node).toString());
     }
 
-    // TODO: consider moving this class
 }

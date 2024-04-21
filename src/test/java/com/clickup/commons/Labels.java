@@ -6,16 +6,22 @@ import java.util.Properties;
 
 public class Labels {
 
-    private static Properties properties = PropertiesLoader.loadLangProperties();
+    private static Properties lang = PropertiesLoader.loadLangProperties();
+
+    private static Properties props = PropertiesLoader.loadPropNames();
 
     private Labels() {
     }
 
-    public static void setProperties(Properties properties) {
-        Labels.properties = properties;
+    public static void setLang(Properties lang) {
+        Labels.lang = lang;
     }
 
-    public static String getProperty(String property) {
-        return Labels.properties.getProperty(property);
+    public static String getExpected(String property) {
+        return Labels.lang.getProperty(property);
+    }
+
+    public static String getProp(String property) {
+        return Labels.props.getProperty(property);
     }
 }

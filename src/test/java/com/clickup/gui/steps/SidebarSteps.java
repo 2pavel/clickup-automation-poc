@@ -29,7 +29,7 @@ public class SidebarSteps extends TestBase {
 
         // TODO: hover fixed but not sure if it works consistently yet
 
-        String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", "TestSpace");
+        String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", spaceName);
         sidebarPage.clickSpaceSettingsBtn(btnLocator);
 
         sidebarSpaceCtxPage.clickDeleteBtn();

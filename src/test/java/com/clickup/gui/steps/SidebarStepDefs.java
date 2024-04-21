@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Labels;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 
@@ -15,7 +16,6 @@ public class SidebarStepDefs {
 
     @When("I click on delete button in space context menu")
     public void i_click_on_delete_button_in_space_context_menu() {
-        sidebarSteps.clickDeleteSpaceBtn("TestSpace");
-        // TODO: improve
+        sidebarSteps.clickDeleteSpaceBtn(Labels.getProp("test_space.name"));
     }
 }

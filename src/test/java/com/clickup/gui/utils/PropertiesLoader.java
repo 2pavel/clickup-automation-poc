@@ -25,6 +25,10 @@ public class PropertiesLoader {
     }
 
     public static Properties loadLangProperties() {
-        return loadProperties(Constants.LANG_FILE_EN);
+        return loadProperties(Constants.EN_LANG_FILE);
+    }
+
+    public static Properties loadPropNames() {
+        return loadProperties(Constants.PROP_NAMES_FILE);
     }
 }
