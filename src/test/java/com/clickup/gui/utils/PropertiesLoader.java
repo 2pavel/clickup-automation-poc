@@ -1,11 +1,15 @@
 package com.clickup.gui.utils;
 
+import com.clickup.commons.Constants;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class PropertiesLoader {
 
+    @NotNull
     public static Properties loadProperties(String filePath) {
         Properties properties = new Properties();
 
@@ -18,5 +22,9 @@ public class PropertiesLoader {
         }
 
         return properties;
+    }
+
+    public static Properties loadLangProperties() {
+        return loadProperties(Constants.LANG_FILE_EN);
     }
 }
