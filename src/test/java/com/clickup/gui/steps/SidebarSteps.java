@@ -10,6 +10,8 @@ import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class SidebarSteps extends TestBase {
 
     SidebarPage sidebarPage;
@@ -46,6 +48,12 @@ public class SidebarSteps extends TestBase {
         String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", spaceName);
         sidebarPage.clickSpaceSettingsBtn(btnLocator);
         sidebarSpaceCtxPage.clickDeleteBtn();
+    }
+
+    public void assertThatSidebarIsNotCollapsed() {
+        assertThat(sidebarPage.getSidebar().getAttribute("data-test").contains("collapsed-container__false"))
+                .as("Sidebar is collapsed but it shouldn't!")
+                .isTrue();
     }
 
 }

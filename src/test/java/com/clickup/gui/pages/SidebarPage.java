@@ -11,6 +11,9 @@ import java.util.List;
 @Getter
 public class SidebarPage extends PageObject {
 
+    @FindBy(css = ".sidebar-v3[role=navigation]")
+    private WebElementFacade sidebar;
+
     @FindBy(css = ".create-project-row__text")
     private WebElementFacade createSpaceBtn;
 

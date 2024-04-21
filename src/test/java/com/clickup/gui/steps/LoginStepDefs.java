@@ -30,8 +30,4 @@ public class LoginStepDefs {
         loginSteps.assertThatHomePageIsDisplayed();
     }
 
-    @Given("I am logged in to the application")
-    public void i_am_logged_in_to_the_application() {
-        // TODO: implement
-    }
 }
