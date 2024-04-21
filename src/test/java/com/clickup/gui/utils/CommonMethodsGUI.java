@@ -1,6 +1,8 @@
 package com.clickup.gui.utils;
 
 import net.serenitybdd.core.pages.WebElementFacade;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
@@ -11,9 +13,9 @@ import static net.serenitybdd.core.Serenity.getDriver;
 
 public class CommonMethodsGUI {
 
-    // TODO: add logger
-
     private static JavascriptExecutor javascriptExecutor;
+
+    Logger logger = LogManager.getLogger(this.getClass().getName());
 
     public static void markElementWithColor(WebElementFacade element) {
         javascriptExecutor = (JavascriptExecutor) getDriver();
