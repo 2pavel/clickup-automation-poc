@@ -15,7 +15,11 @@ public class CommonMethodsGUI {
 
     private static JavascriptExecutor javascriptExecutor;
 
-    Logger logger = LogManager.getLogger(this.getClass().getName());
+    private static Logger logger = LogManager.getLogger();
+
+    private static Logger log() {
+        return logger;
+    }
 
     public static void markElementWithColor(WebElementFacade element) {
         javascriptExecutor = (JavascriptExecutor) getDriver();
@@ -60,11 +64,12 @@ public class CommonMethodsGUI {
     public static WebElementFacade getElementFromListByText(List<WebElementFacade> listOfElements, String text) {
         for (WebElementFacade element : listOfElements) {
             if (element.containsText(text)) {
+                log().info("Found element containing text: {}", text);
                 return element;
             }
         }
+        log().warn("Element containing '{}' was not found!", text);
         return null;
-        // TODO: handle it in a better way
     }
 
     public static String buildDataTestLocator(String base, String suffix) {
