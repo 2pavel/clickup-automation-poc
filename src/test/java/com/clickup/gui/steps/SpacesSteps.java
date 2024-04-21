@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.CreateSpaceModalPage;
 import com.clickup.gui.pages.DeleteSpaceModalPage;
@@ -19,8 +20,8 @@ public class SpacesSteps extends TestBase {
     SidebarPage sidebarPage;
 
     public void enterSpaceName() {
-        // TODO: add space name to constants
-        createSpaceModalPage.typeIntoSpaceNameInput("TestSpace");
+        String spaceName = Labels.getProp("test_space.name");
+        createSpaceModalPage.typeIntoSpaceNameInput(spaceName);
     }
 
     public void clickContinueBtn() {
@@ -35,15 +36,34 @@ public class SpacesSteps extends TestBase {
         deleteSpaceModalPage.typeIntoSafeguardInput(spaceName);
     }
 
+    public void fillSafeguardForm() {
+        String spaceName = Labels.getProp("test_space.name");
+        deleteSpaceModalPage.typeIntoSafeguardInput(spaceName);
+    }
+
     public void confirmDeletion() {
         deleteSpaceModalPage.clickDeleteBtn();
         deleteSpaceModalPage.getDialogWindow().waitUntilNotVisible();
+    }
+
+    public void assertThatSpaceIsVisible() {
+        String spaceName = Labels.getProp("test_space.name");
+        assertThat(isSpaceWithGivenNameDisplayed(spaceName))
+                .as("Space with name '" + spaceName + "' was not found!")
+                .isTrue();
     }
 
     public void assertThatSpaceIsVisible(String spaceName) {
         assertThat(isSpaceWithGivenNameDisplayed(spaceName))
                 .as("Space with name '" + spaceName + "' was not found!")
                 .isTrue();
+    }
+
+    public void assertThatSpaceIsNotVisible() {
+        String spaceName = Labels.getProp("test_space.name");
+        assertThat(isSpaceWithGivenNameDisplayed(spaceName))
+                .as("Space with name '" + spaceName + "' was found but it should be deleted!")
+                .isFalse();
     }
 
     public void assertThatSpaceIsNotVisible(String spaceName) {

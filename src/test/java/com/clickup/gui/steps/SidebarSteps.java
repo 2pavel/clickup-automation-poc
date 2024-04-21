@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.DeleteSpaceModalPage;
 import com.clickup.gui.pages.SidebarPage;
@@ -22,19 +23,30 @@ public class SidebarSteps extends TestBase {
 
     public void clickDeleteSpaceBtn(String spaceName) {
         List<WebElementFacade> allSpaces = sidebarPage.getListOfSpacesWithNames();
+
         Wait.forAllListElementsToBeVisible(allSpaces);
 
-        WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, "TestSpace");
+        WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, spaceName);
         CommonMethodsGUI.hoverOverElement(spaceRow);
 
+        String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", spaceName);
+        sidebarPage.clickSpaceSettingsBtn(btnLocator);
+        sidebarSpaceCtxPage.clickDeleteBtn();
+    }
+
+    public void clickDeleteSpaceBtn() {
+        String spaceName = Labels.getProp("test_space.name");
+        List<WebElementFacade> allSpaces = sidebarPage.getListOfSpacesWithNames();
+
+        Wait.forAllListElementsToBeVisible(allSpaces);
+
+        WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, spaceName);
+        CommonMethodsGUI.hoverOverElement(spaceRow);
         // TODO: hover fixed but not sure if it works consistently yet
 
         String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", spaceName);
         sidebarPage.clickSpaceSettingsBtn(btnLocator);
-
         sidebarSpaceCtxPage.clickDeleteBtn();
-
-
     }
 
 }

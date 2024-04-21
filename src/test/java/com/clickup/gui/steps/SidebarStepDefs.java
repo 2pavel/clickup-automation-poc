@@ -16,6 +16,6 @@ public class SidebarStepDefs {
 
     @When("I click on delete button in space context menu")
     public void i_click_on_delete_button_in_space_context_menu() {
-        sidebarSteps.clickDeleteSpaceBtn(Labels.getProp("test_space.name"));
+        sidebarSteps.clickDeleteSpaceBtn();
     }
 }
