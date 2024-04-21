@@ -43,7 +43,6 @@ public class SidebarSteps extends TestBase {
 
         WebElementFacade spaceRow = CommonMethodsGUI.getElementFromListByText(allSpaces, spaceName);
         CommonMethodsGUI.hoverOverElement(spaceRow);
-        // TODO: hover fixed but not sure if it works consistently yet
 
         String btnLocator = CommonMethodsGUI.buildDataTestLocator("project-row__ellipsis__", spaceName);
         sidebarPage.clickSpaceSettingsBtn(btnLocator);
