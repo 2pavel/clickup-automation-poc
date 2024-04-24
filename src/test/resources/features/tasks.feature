@@ -8,6 +8,6 @@ Feature: tasks
     And I sign in as user "Testerski"
 
   Scenario: Create a task
-    When I click "Add Task" button
+    When I click Add Task button
     And I complete task creation form
     Then The task is visible on the list
