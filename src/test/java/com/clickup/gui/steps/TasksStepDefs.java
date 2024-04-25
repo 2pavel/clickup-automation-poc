@@ -20,6 +20,6 @@ public class TasksStepDefs {
     }
     @Then("The task is visible on the list")
     public void the_task_is_visible_on_the_list() {
-
+        tasksSteps.assertThatTaskIsVisible();
     }
 }

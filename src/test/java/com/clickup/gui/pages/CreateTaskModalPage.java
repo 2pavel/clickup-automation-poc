@@ -9,6 +9,9 @@ import org.openqa.selenium.support.FindBy;
 @Getter
 public class CreateTaskModalPage extends PageObject {
 
+    @FindBy(css = "[data-test=modal__body]")
+    private WebElementFacade createTaskDialog;
+
     @FindBy(css = "[data-test=draft-view__quick-create-create]")
     private WebElementFacade createTaskBtn;
 
@@ -17,6 +20,7 @@ public class CreateTaskModalPage extends PageObject {
 
     public void clickCreateTaskBtn() {
         CommonMethodsGUI.clickOnElement(createTaskBtn);
+        createTaskDialog.waitUntilNotVisible();
     }
 
     public void typeIntoTaskNameField(String text) {
