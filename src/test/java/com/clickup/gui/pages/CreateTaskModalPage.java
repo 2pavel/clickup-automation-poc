@@ -18,4 +18,8 @@ public class CreateTaskModalPage extends PageObject {
     public void clickCreateTaskBtn() {
         CommonMethodsGUI.clickOnElement(createTaskBtn);
     }
+
+    public void typeIntoTaskNameField(String text) {
+        taskNameField.type(text);
+    }
 }

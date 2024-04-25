@@ -1,6 +1,6 @@
 # language: en
 
-Feature: tasks
+Feature: Tasks
 
   Background:
     Given I am on base page
