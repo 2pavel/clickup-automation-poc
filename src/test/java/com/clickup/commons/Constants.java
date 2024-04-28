@@ -2,7 +2,7 @@ package com.clickup.commons;
 
 public class Constants {
 
-    // ------------ FILE PATHS ------------
+    // --------------- FILE PATHS ---------------
     public static final String RESOURCES_DIR = "src/test/resources";
     public static final String TESTDATA_DIR = RESOURCES_DIR + "/testdata";
     public static final String ACTORS_FILE = TESTDATA_DIR + "/actors.json";
@@ -11,5 +11,8 @@ public class Constants {
 
     // ------------ LOCATOR DATA-TEST ------------
     public static final String TASK_CTX_DATA_TEST = "[data-test=task-row-menu__ellipsis-v3-button]";
+
+    // -------------- LOCATOR XPATH --------------
+    public static final String PREFERENCES_SECTION_XPATH = ".//h2[contains(text(), 'Preferences')]/parent::header/parent::section";
 
 }
