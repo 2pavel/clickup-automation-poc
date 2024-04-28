@@ -1,9 +1,12 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.UserCtxPage;
 import com.clickup.gui.pages.UserSettingsPage;
+import com.clickup.gui.utils.CommonMethodsGUI;
+import org.assertj.core.api.SoftAssertions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -23,9 +26,15 @@ public class SettingsSteps extends TestBase {
         userCtxPage.clickSettingsBtn();
     }
 
+    public void scrollToPreferences() {
+        CommonMethodsGUI.scrollToElement(userSettingsPage.getPreferencesHeader());
+    }
+
     public void assertAllPreferenceLabelsAreDisplayed() {
-        // TODO: implement
-        assertThat(userSettingsPage.getUserAvatar().isDisplayed()).isTrue();
+        // TODO: add assertions
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(Labels.getExpected("toast"))
+                .isEqualTo(userSettingsPage.getPreferencesLabels().get(0).getText());
     }
 
 }

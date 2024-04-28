@@ -16,6 +16,7 @@ public class SettingsStepDefs {
     }
     @Then("All preference toggles are displayed")
     public void all_preference_toggles_are_displayed() {
+        settingsSteps.scrollToPreferences();
         settingsSteps.assertAllPreferenceLabelsAreDisplayed();
     }
 }

@@ -20,7 +20,7 @@ public class UserSettingsPage extends PageObject {
     @FindBy(xpath = Constants.PREFERENCES_SECTION_XPATH)
     private WebElementFacade preferencesSection;
 
-    @FindBy(xpath = Constants.PREFERENCES_SECTION_XPATH + "/h3")
+    @FindBy(xpath = Constants.PREFERENCES_SECTION_XPATH + "//h3")
     private List<WebElementFacade> preferencesLabels;
 
     @FindBy(xpath = Constants.PREFERENCES_SECTION_XPATH + "//input[contains(@class, 'switch__checkbox')]")
