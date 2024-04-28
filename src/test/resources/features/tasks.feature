@@ -14,6 +14,6 @@ Feature: Tasks
 
   Scenario: Delete a task
     Given I am on a project page with created task
-    When I click delete in the task context menu
+    When I click delete in the "TestTask" context menu
     Then The task is removed
     And Toast notification informing about removed task appears

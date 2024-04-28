@@ -74,4 +74,5 @@ public class CommonMethodsGUI {
     public static String buildDataTestLocator(String base, String suffix) {
         return "[data-test='" + base + suffix + "']";
     }
+
 }

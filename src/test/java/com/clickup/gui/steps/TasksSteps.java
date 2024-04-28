@@ -1,10 +1,12 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Constants;
 import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.ControllerRowPage;
 import com.clickup.gui.pages.CreateTaskModalPage;
 import com.clickup.gui.pages.ProjectMainViewPage;
+import com.clickup.gui.pages.TaskCtxPage;
 import com.clickup.gui.utils.CommonMethodsGUI;
 import com.clickup.gui.utils.Wait;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -21,6 +23,8 @@ public class TasksSteps extends TestBase {
 
     ProjectMainViewPage projectMainViewPage;
 
+    TaskCtxPage taskCtxPage;
+
     public void clickAddTaskBtn() {
         controllerRowPage.clickAddTaskBtn();
     }
@@ -34,6 +38,16 @@ public class TasksSteps extends TestBase {
         createTaskModalPage.clickCreateTaskBtn();
         List<WebElementFacade> allTasks = projectMainViewPage.getMainViewTasksList();
         Wait.forAllListElementsToBeVisible(allTasks);
+    }
+
+    public void openTaskContextMenu(String taskName) {
+        String containerLocator = CommonMethodsGUI.buildDataTestLocator("task-row__container__", taskName);
+        String btnLocator = containerLocator + Constants.TASK_CTX_DATA_TEST;
+        projectMainViewPage.clickTaskCtxBtn(btnLocator);
+    }
+
+    public void clickDeleteTaskBtn() {
+        taskCtxPage.clickDeleteBtn();
     }
 
     public void assertThatTaskIsVisible() {

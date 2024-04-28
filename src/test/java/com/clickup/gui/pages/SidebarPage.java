@@ -30,8 +30,8 @@ public class SidebarPage extends PageObject {
         CommonMethodsGUI.clickOnElement(createSpaceBtn);
     }
 
-    public void clickSpaceSettingsBtn(String spaceNameCssLocatorByName) {
-        WebElementFacade settingsBtn = findBy(spaceNameCssLocatorByName);
+    public void clickSpaceSettingsBtn(String btnLocator) {
+        WebElementFacade settingsBtn = findBy(btnLocator);
         CommonMethodsGUI.clickOnElement(settingsBtn);
     }
 
