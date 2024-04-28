@@ -3,10 +3,7 @@ package com.clickup.gui.steps;
 import com.clickup.commons.Constants;
 import com.clickup.commons.Labels;
 import com.clickup.gui.TestBase;
-import com.clickup.gui.pages.ControllerRowPage;
-import com.clickup.gui.pages.CreateTaskModalPage;
-import com.clickup.gui.pages.ProjectMainViewPage;
-import com.clickup.gui.pages.TaskCtxPage;
+import com.clickup.gui.pages.*;
 import com.clickup.gui.utils.CommonMethodsGUI;
 import com.clickup.gui.utils.Wait;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -25,6 +22,8 @@ public class TasksSteps extends TestBase {
 
     TaskCtxPage taskCtxPage;
 
+    ToastPage toastPage;
+
     public void clickAddTaskBtn() {
         controllerRowPage.clickAddTaskBtn();
     }
@@ -42,7 +41,7 @@ public class TasksSteps extends TestBase {
 
     public void openTaskContextMenu(String taskName) {
         String containerLocator = CommonMethodsGUI.buildDataTestLocator("task-row__container__", taskName);
-        String btnLocator = containerLocator + Constants.TASK_CTX_DATA_TEST;
+        String btnLocator = containerLocator + " " + Constants.TASK_CTX_DATA_TEST;
         projectMainViewPage.clickTaskCtxBtn(btnLocator);
     }
 
@@ -55,10 +54,23 @@ public class TasksSteps extends TestBase {
         assertThat(isTaskWithGivenNameDisplayed(taskName))
                 .as("Task with name '" + taskName + "' was not found!")
                 .isTrue();
-        log().info("Assertion passed");
+    }
+
+    public void assertThatTaskIsNotVisible() {
+        String taskName = Labels.getProp("test_task.name");
+        assertThat(isTaskWithGivenNameDisplayed(taskName))
+                .as("Task with name '" + taskName + "' was found but it should no longer be visible!")
+                .isFalse();
+    }
+
+    public void assertThatTaskRemovalToastIsVisible() {
+        assertThat(toastPage.getTaskRemovedToast().isDisplayed())
+                .as("Toast notification was not displayed!")
+                .isTrue();
     }
 
     public boolean isTaskWithGivenNameDisplayed(String taskName) {
+        // TODO: consider simplifying
         List<String> allVisibleTasks = CommonMethodsGUI.getTextFromListOfElements(projectMainViewPage.getMainViewTasksList());
         return allVisibleTasks.contains(taskName);
     }

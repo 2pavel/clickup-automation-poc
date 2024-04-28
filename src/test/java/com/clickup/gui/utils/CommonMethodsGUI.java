@@ -46,6 +46,7 @@ public class CommonMethodsGUI {
     public static boolean isElementDisplayed(WebElementFacade element) {
         markElementWithColor(element);
         return element.isDisplayed();
+        // TODO: consider using this mechanism in all tests
     }
 
     public static String getTextFromElement(WebElementFacade element){

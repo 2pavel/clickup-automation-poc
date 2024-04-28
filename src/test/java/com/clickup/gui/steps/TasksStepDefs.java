@@ -22,10 +22,11 @@ public class TasksStepDefs {
     @Then("The task is visible on the list")
     public void the_task_is_visible_on_the_list() {
         tasksSteps.assertThatTaskIsVisible();
+        // TODO: sometimes assert is checked too quickly; before task appears
     }
 
-    @Given("I am on a project page with created task")
-    public void i_am_on_a_project_page_with_created_task() {
+    @Given("I am on a project page with created task {string}")
+    public void i_am_on_a_project_page_with_created_task(String taskName) {
         // TODO: implement
     }
     @When("I click delete in the {string} context menu")
@@ -35,11 +36,11 @@ public class TasksStepDefs {
     }
     @Then("The task is removed")
     public void the_task_is_removed() {
-        // TODO: implement
+        tasksSteps.assertThatTaskIsNotVisible();
     }
     @Then("Toast notification informing about removed task appears")
     public void toast_notification_informing_about_removed_task_appears() {
-        // TODO: implement
+        tasksSteps.assertThatTaskRemovalToastIsVisible();
     }
 
 }
