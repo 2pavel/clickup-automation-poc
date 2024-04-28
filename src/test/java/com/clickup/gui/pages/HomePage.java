@@ -1,5 +1,6 @@
 package com.clickup.gui.pages;
 
+import com.clickup.gui.utils.CommonMethodsGUI;
 import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -25,4 +26,8 @@ public class HomePage extends PageObject {
 
     @FindBy(css = "[data-test^=dashboard__body]")
     private WebElementFacade dashboard;
+
+    public void clickUserAvatar() {
+        CommonMethodsGUI.clickOnElement(userAvatar);
+    }
 }
