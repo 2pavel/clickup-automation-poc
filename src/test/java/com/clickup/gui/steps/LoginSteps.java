@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import com.clickup.commons.Constants;
 import com.clickup.commons.pojo.Actors;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
@@ -25,6 +26,11 @@ public class LoginSteps extends TestBase {
         enterEmailOfUser(username);
         enterPasswordOfUser(username);
         loginPage.clickLogin();
+    }
+
+    public void loginToApplication() {
+        log().info("Attempting login as default user");
+        loginToApplication(Constants.DEFAULT_USER);
     }
 
     public void enterEmailOfUser(String userLastName) {

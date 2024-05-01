@@ -15,4 +15,7 @@ public class Constants {
     // -------------- LOCATOR XPATH --------------
     public static final String PREFERENCES_SECTION_XPATH = ".//h2[contains(text(), 'Preferences')]/parent::header/parent::section";
 
+    // ------------------ USERS ------------------
+    public static final String DEFAULT_USER = "Testerski";
+
 }
