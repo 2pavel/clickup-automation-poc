@@ -17,9 +17,25 @@ public class ProjectMainViewPage extends PageObject {
     @FindBy(css = "[data-test=task-row-menu__ellipsis-v3-button]")
     private List<WebElementFacade> tasksContextMenuBtnsList;
 
-
     public void clickTaskCtxBtn(String btnLocator) {
         WebElementFacade taskCtxBtn = findBy(btnLocator);
         CommonMethodsGUI.clickOnElement(taskCtxBtn);
     }
+
+    public void clickTaskRenameBtn(String btnLocator) {
+        WebElementFacade taskRenameBtn = findBy(btnLocator);
+        CommonMethodsGUI.clickOnElement(taskRenameBtn);
+        taskRenameBtn.waitUntilNotVisible();
+    }
+
+    public void typeIntoEditedRow(String text) {
+
+        // TODO: try grabbing editable row by waiting for class to change
+        //  class="cu-editable cu-task-row-main ng-star-inserted"
+        //  class="cu-editable cu-task-row-main ng-star-inserted cu-editable_editing"
+        //  -----------------------------------------------------
+        //  note: data-test="editable__input" is BS! DO NOT USE!
+
+    }
+
 }
