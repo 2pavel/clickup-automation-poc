@@ -57,10 +57,15 @@ public class TasksSteps extends TestBase {
         String btnLocator = CommonMethodsGUI.buildDataTestLocator(
                 "task-row-main__link-text__", taskName) + " [data-test=task-row-main__rename]";
         projectMainViewPage.clickTaskRenameBtn(btnLocator);
+        // TODO: remove later
     }
 
-    public void typeIntoRowInputField(String newTaskName) {
-        projectMainViewPage.typeIntoEditedRow(newTaskName);
+    public void clickOnTheTaskRow(String taskName) {
+        // TODO:
+    }
+
+    public void typeIntoTaskNameField(String newTaskName) {
+        projectMainViewPage.typeIntoTaskNameField(newTaskName);
     }
 
     public void assertThatTaskIsVisible() {

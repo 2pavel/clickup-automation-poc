@@ -4,6 +4,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
@@ -76,4 +77,17 @@ public class CommonMethodsGUI {
         return "[data-test='" + base + suffix + "']";
     }
 
+    public static void typeByActions(String text) {
+        Actions actions = new Actions(getDriver());
+        actions.sendKeys(text).perform();
+    }
+
+    public static void pressEnter() {
+        Actions actions = new Actions(getDriver());
+        actions
+                .keyDown(Keys.ENTER)
+                .keyUp(Keys.ENTER)
+                .perform();
+
+    }
 }

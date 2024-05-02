@@ -43,14 +43,14 @@ public class TasksStepDefs {
         tasksSteps.assertThatTaskRemovalToastIsVisible();
     }
 
-    @When("I click rename button in the {string} row")
-    public void i_click_rename_button_in_the_row(String taskName) {
-        tasksSteps.clickRenameTaskBtn(taskName);
+    @When("I click on the {string} row")
+    public void i_click_on_the_row(String taskName) {
+        tasksSteps.clickOnTheTaskRow(taskName);
 
     }
     @When("I type {string} into the row input field")
     public void i_type_into_the_row_input_field(String newTaskName) {
-        tasksSteps.typeIntoRowInputField(newTaskName);
+        tasksSteps.typeIntoTaskNameField(newTaskName);
 
     }
     @Then("The task name is changed")

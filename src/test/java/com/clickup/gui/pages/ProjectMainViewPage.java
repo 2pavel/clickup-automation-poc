@@ -1,6 +1,7 @@
 package com.clickup.gui.pages;
 
 import com.clickup.gui.utils.CommonMethodsGUI;
+import com.clickup.gui.utils.Wait;
 import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -17,6 +18,9 @@ public class ProjectMainViewPage extends PageObject {
     @FindBy(css = "[data-test=task-row-menu__ellipsis-v3-button]")
     private List<WebElementFacade> tasksContextMenuBtnsList;
 
+    @FindBy(css = "cu-editable[data-test=task-row-main]")
+    private List<WebElementFacade> editableTaskRows;
+
     public void clickTaskCtxBtn(String btnLocator) {
         WebElementFacade taskCtxBtn = findBy(btnLocator);
         CommonMethodsGUI.clickOnElement(taskCtxBtn);
@@ -28,14 +32,8 @@ public class ProjectMainViewPage extends PageObject {
         taskRenameBtn.waitUntilNotVisible();
     }
 
-    public void typeIntoEditedRow(String text) {
-
-        // TODO: try grabbing editable row by waiting for class to change
-        //  class="cu-editable cu-task-row-main ng-star-inserted"
-        //  class="cu-editable cu-task-row-main ng-star-inserted cu-editable_editing"
-        //  -----------------------------------------------------
-        //  note: data-test="editable__input" is BS! DO NOT USE!
-
+    public void typeIntoTaskNameField(String text) {
+        // TODO: implement
     }
 
 }

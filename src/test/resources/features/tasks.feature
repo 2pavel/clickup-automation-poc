@@ -20,7 +20,7 @@ Feature: Tasks
 
   Scenario: Rename a task
     Given I am on a project page with created task "TaskToRename"
-    When I click rename button in the "TaskToRename" row
+    When I click on the "TaskToRename" row
     And I type "_text" into the row input field
     Then The task name is changed
 
