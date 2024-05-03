@@ -25,8 +25,4 @@ public class Labels {
         return Labels.props.getProperty(property);
     }
 
-    public static void setProp(String property, String value) {
-        Labels.props.setProperty(property, value);
-        PropertiesLoader.saveProps();
-    }
 }

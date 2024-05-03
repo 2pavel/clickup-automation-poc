@@ -2,6 +2,7 @@ package com.clickup.gui.steps;
 
 import com.clickup.commons.Constants;
 import com.clickup.commons.Labels;
+import com.clickup.commons.Temp;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.*;
 import com.clickup.gui.utils.CommonMethodsGUI;
@@ -79,8 +80,8 @@ public class TasksSteps extends TestBase {
         taskViewModalPage.close();
     }
 
-    public void saveRenamedTaskLabel(String label) {
-        Labels.setProp("test_task.renamed", label);
+    public void saveRenamedTaskLabel(String tempLabel) {
+        Temp.renamedTask = tempLabel;
     }
 
     public void assertThatTaskIsVisible() {

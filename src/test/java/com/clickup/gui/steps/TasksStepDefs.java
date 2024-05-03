@@ -1,6 +1,7 @@
 package com.clickup.gui.steps;
 
 import com.clickup.commons.Labels;
+import com.clickup.commons.Temp;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -55,7 +56,7 @@ public class TasksStepDefs {
     }
     @Then("The task name is changed")
     public void the_task_name_is_changed() {
-        tasksSteps.assertThatTaskIsVisible(Labels.getProp("renamed"));
+        tasksSteps.assertThatTaskIsVisible(Temp.renamedTask);
     }
 
 }
