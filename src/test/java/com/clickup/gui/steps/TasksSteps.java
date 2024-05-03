@@ -72,6 +72,11 @@ public class TasksSteps extends TestBase {
         taskViewModalPage.typeIntoTaskNameField(newTaskName);
     }
 
+    public void confirmTaskNameAndClose() {
+        CommonMethodsGUI.pressEnter();
+        taskViewModalPage.close();
+    }
+
     public void assertThatTaskIsVisible() {
         String taskName = Labels.getProp("test_task.name");
         assertThat(isTaskWithGivenNameDisplayed(taskName))

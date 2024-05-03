@@ -1,6 +1,5 @@
 package com.clickup.gui.pages;
 
-import com.clickup.gui.utils.CommonMethodsGUI;
 import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -15,7 +14,15 @@ public class TaskViewModalPage extends PageObject {
     @FindBy(css = "textarea[data-test^=task-title]")
     private WebElementFacade taskNameField;
 
+    @FindBy(css = "[data-test=task-close-v3]")
+    private WebElementFacade closeBtn;
+
     public void typeIntoTaskNameField(String text) {
         taskNameField.type(text);
+    }
+
+    public void close() {
+        closeBtn.click();
+        taskViewContainer.waitUntilNotVisible();
     }
 }

@@ -50,7 +50,7 @@ public class TasksStepDefs {
     @When("I type {string} into the row input field")
     public void i_type_into_the_row_input_field(String newTaskName) {
         tasksSteps.typeIntoTaskNameField(newTaskName);
-
+        tasksSteps.confirmTaskNameAndClose();
     }
     @Then("The task name is changed")
     public void the_task_name_is_changed() {
