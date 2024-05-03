@@ -23,5 +23,3 @@ Feature: Tasks
     When I click on the "TaskToRename" row
     And I type "_text" into the row input field
     Then The task name is changed
-
-

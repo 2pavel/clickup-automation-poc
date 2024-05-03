@@ -46,7 +46,6 @@ public class TasksStepDefs {
     @When("I click on the {string} row")
     public void i_click_on_the_row(String taskName) {
         tasksSteps.clickOnTheTaskRow(taskName);
-
     }
     @When("I type {string} into the row input field")
     public void i_type_into_the_row_input_field(String newTaskName) {

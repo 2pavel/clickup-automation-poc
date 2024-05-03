@@ -18,6 +18,8 @@ public class TasksSteps extends TestBase {
 
     CreateTaskModalPage createTaskModalPage;
 
+    TaskViewModalPage taskViewModalPage;
+
     ProjectMainViewPage projectMainViewPage;
 
     TaskCtxPage taskCtxPage;
@@ -61,11 +63,13 @@ public class TasksSteps extends TestBase {
     }
 
     public void clickOnTheTaskRow(String taskName) {
-        // TODO:
+        projectMainViewPage.clickTaskByName(taskName);
+        WebElementFacade taskViewContainer = taskViewModalPage.getTaskViewContainer();
+        taskViewContainer.waitUntilVisible();
     }
 
     public void typeIntoTaskNameField(String newTaskName) {
-        projectMainViewPage.typeIntoTaskNameField(newTaskName);
+        taskViewModalPage.typeIntoTaskNameField(newTaskName);
     }
 
     public void assertThatTaskIsVisible() {

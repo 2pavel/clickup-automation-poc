@@ -32,8 +32,9 @@ public class ProjectMainViewPage extends PageObject {
         taskRenameBtn.waitUntilNotVisible();
     }
 
-    public void typeIntoTaskNameField(String text) {
-        // TODO: implement
+    public void clickTaskByName(String taskName) {
+        WebElementFacade taskLabel = CommonMethodsGUI.getElementFromListByText(mainViewTasksList, taskName);
+        CommonMethodsGUI.clickOnElement(taskLabel);
     }
 
 }

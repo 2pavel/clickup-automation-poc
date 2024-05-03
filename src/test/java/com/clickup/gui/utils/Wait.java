@@ -11,9 +11,9 @@ public class Wait {
         elements.forEach(WebElementFacade::waitUntilVisible);
     }
 
-    public static void forElementToContainClass(WebElementFacade element, String expectedClass) {
+    public static void forElementToContainAttribute(WebElementFacade element, String attr, String expectedVal) {
         element.waitForCondition().until(
-                ExpectedConditions.attributeContains(element, "class", expectedClass)
+                ExpectedConditions.attributeContains(element, attr, expectedVal)
         );
     }
 
