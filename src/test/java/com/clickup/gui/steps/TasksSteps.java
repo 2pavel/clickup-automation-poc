@@ -9,6 +9,7 @@ import com.clickup.gui.utils.Wait;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
+import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -70,6 +71,7 @@ public class TasksSteps extends TestBase {
 
     public void typeIntoTaskNameField(String newTaskName) {
         taskViewModalPage.typeIntoTaskNameField(newTaskName);
+        saveRenamedTaskLabel(newTaskName);
     }
 
     public void confirmTaskNameAndClose() {
@@ -77,8 +79,18 @@ public class TasksSteps extends TestBase {
         taskViewModalPage.close();
     }
 
+    public void saveRenamedTaskLabel(String label) {
+        Labels.setProp("test_task.renamed", label);
+    }
+
     public void assertThatTaskIsVisible() {
         String taskName = Labels.getProp("test_task.name");
+        assertThat(isTaskWithGivenNameDisplayed(taskName))
+                .as("Task with name '" + taskName + "' was not found!")
+                .isTrue();
+    }
+
+    public void assertThatTaskIsVisible(String taskName) {
         assertThat(isTaskWithGivenNameDisplayed(taskName))
                 .as("Task with name '" + taskName + "' was not found!")
                 .isTrue();
@@ -98,8 +110,8 @@ public class TasksSteps extends TestBase {
     }
 
     public boolean isTaskWithGivenNameDisplayed(String taskName) {
-        // TODO: consider simplifying
-        List<String> allVisibleTasks = CommonMethodsGUI.getTextFromListOfElements(projectMainViewPage.getMainViewTasksList());
-        return allVisibleTasks.contains(taskName);
+        List<WebElementFacade> taskRows = projectMainViewPage.getMainViewTasksList();
+        List<String> taskLabels = CommonMethodsGUI.getTextFromListOfElements(taskRows);
+        return taskLabels.contains(taskName);
     }
 }

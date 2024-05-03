@@ -1,7 +1,6 @@
 package com.clickup.gui.pages;
 
 import com.clickup.gui.utils.CommonMethodsGUI;
-import com.clickup.gui.utils.Wait;
 import lombok.Getter;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
