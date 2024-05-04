@@ -53,17 +53,6 @@ public class TasksSteps extends TestBase {
         taskCtxPage.clickDeleteBtn();
     }
 
-    public void clickRenameTaskBtn(String taskName) {
-        List<WebElementFacade> allTasks = projectMainViewPage.getMainViewTasksList();
-        WebElementFacade taskToRename = CommonMethodsGUI.getElementFromListByText(allTasks, taskName);
-
-        CommonMethodsGUI.hoverOverElement(taskToRename);
-        String btnLocator = CommonMethodsGUI.buildDataTestLocator(
-                "task-row-main__link-text__", taskName) + " [data-test=task-row-main__rename]";
-        projectMainViewPage.clickTaskRenameBtn(btnLocator);
-        // TODO: remove later
-    }
-
     public void clickOnTheTaskRow(String taskName) {
         projectMainViewPage.clickTaskByName(taskName);
         WebElementFacade taskViewContainer = taskViewModalPage.getTaskViewContainer();
