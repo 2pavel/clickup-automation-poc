@@ -8,8 +8,6 @@ import com.clickup.gui.pages.UserSettingsPage;
 import com.clickup.gui.utils.CommonMethodsGUI;
 import org.assertj.core.api.SoftAssertions;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class SettingsSteps extends TestBase {
 
     HomePage homePage;
@@ -20,6 +18,7 @@ public class SettingsSteps extends TestBase {
 
     public void openUserCtxMenu() {
         homePage.clickUserAvatar();
+        // TODO: move to a new class for top bar actions
     }
 
     public void openUserSettingsPage() {

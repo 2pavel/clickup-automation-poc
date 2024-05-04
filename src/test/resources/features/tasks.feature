@@ -18,8 +18,12 @@ Feature: Tasks
     Then The task is removed
     And Toast notification informing about removed task appears
 
-  Scenario: Rename a task
+  Scenario Outline: Rename a task
     Given I am on a project page with created task "TaskToRename"
     When I click on the "TaskToRename" row
-    And I type "RenamedTask" into the row input field
+    And I type "<new task name>" into the row input field
     Then The task name is changed
+      Examples:
+    | new task name |
+    | RenamedTask   |
+    | 1             |
