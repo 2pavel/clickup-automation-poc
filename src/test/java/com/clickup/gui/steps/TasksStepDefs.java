@@ -29,7 +29,7 @@ public class TasksStepDefs {
 
     @Given("I am on a project page with created task {string}")
     public void i_am_on_a_project_page_with_created_task(String taskName) {
-        // TODO: implement
+        tasksSteps.renameLastTaskIfNotVisible(taskName);
     }
     @When("I click delete in the {string} context menu")
     public void i_click_delete_in_the_task_context_menu(String taskName) {

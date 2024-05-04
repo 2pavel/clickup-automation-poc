@@ -80,10 +80,21 @@ public class TasksSteps extends TestBase {
         taskViewModalPage.close();
     }
 
+    public void renameLastTaskIfNotVisible(String taskName) {
+        if (!isTaskWithGivenNameDisplayed(taskName)) {
+            List<WebElementFacade> taskList = projectMainViewPage.getMainViewTasksList();
+            WebElementFacade lastTask = taskList.get(taskList.size() - 1);
+            lastTask.click();
+            typeIntoTaskNameField(taskName);
+            confirmTaskNameAndClose();
+        }
+    }
+
     public void saveRenamedTaskLabel(String tempLabel) {
         Temp.renamedTask = tempLabel;
     }
 
+    // ------------ ASSERTIONS ------------
     public void assertThatTaskIsVisible() {
         String taskName = Labels.getProp("test_task.name");
         assertThat(isTaskWithGivenNameDisplayed(taskName))

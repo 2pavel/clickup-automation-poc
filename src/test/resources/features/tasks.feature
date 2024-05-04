@@ -24,6 +24,7 @@ Feature: Tasks
     And I type "<new task name>" into the row input field
     Then The task name is changed
       Examples:
-    | new task name |
-    | RenamedTask   |
-    | 1             |
+    | new task name                 |
+    | RenamedTask                   |
+    | 1                             |
+    | !@#$%^&*\()_+⌚ qweasdzxc™✌   |
