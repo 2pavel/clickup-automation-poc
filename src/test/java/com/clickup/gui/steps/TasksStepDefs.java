@@ -1,6 +1,5 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Labels;
 import com.clickup.commons.Temp;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
