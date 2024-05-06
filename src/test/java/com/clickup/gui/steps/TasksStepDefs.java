@@ -23,8 +23,8 @@ public class TasksStepDefs {
     @Then("The task is visible on the list")
     public void the_task_is_visible_on_the_list() {
         tasksSteps.assertThatTaskIsVisible();
-        // TODO: this needs to be monitored
-        //  not sure if it works consistently, might proc too fast
+        // TODO: this needs to be monitored not sure if it works consistently,
+        //  might proc too fast. [UPDATE]: added new wait, now it should work
     }
 
     @Given("I am on a project page with created task {string}")

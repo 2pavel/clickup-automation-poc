@@ -34,4 +34,7 @@ public class HookStepDefs {
         settingsSteps.openUserCtxMenu();
         logoutSteps.clickLogoutBtn();
     }
+
+    // TODO: figure out why using TestRunner leaves some instances running
+    //  consider adding a hook to manually quit
 }
