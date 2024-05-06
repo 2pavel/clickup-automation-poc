@@ -1,6 +1,6 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Labels;
+import com.clickup.commons.Constants;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.UserCtxPage;
@@ -32,7 +32,7 @@ public class SettingsSteps extends TestBase {
     public void assertAllPreferenceLabelsAreDisplayed() {
         // TODO: add assertions
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(Labels.getExpected("toast"))
+        softly.assertThat(Constants.TOAST)
                 .isEqualTo(userSettingsPage.getPreferencesLabels().get(0).getText());
     }
 

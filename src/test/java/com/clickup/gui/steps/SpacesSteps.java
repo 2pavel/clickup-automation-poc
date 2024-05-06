@@ -1,6 +1,6 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Labels;
+import com.clickup.commons.Constants;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.CreateSpaceModalPage;
 import com.clickup.gui.pages.DeleteSpaceModalPage;
@@ -20,7 +20,7 @@ public class SpacesSteps extends TestBase {
     SidebarPage sidebarPage;
 
     public void enterSpaceName() {
-        String spaceName = Labels.getProp("test_space.name");
+        String spaceName = Constants.TEST_SPACE;
         createSpaceModalPage.typeIntoSpaceNameInput(spaceName);
     }
 
@@ -37,7 +37,7 @@ public class SpacesSteps extends TestBase {
     }
 
     public void fillSafeguardForm() {
-        String spaceName = Labels.getProp("test_space.name");
+        String spaceName = Constants.TEST_SPACE;
         deleteSpaceModalPage.typeIntoSafeguardInput(spaceName);
     }
 
@@ -47,7 +47,7 @@ public class SpacesSteps extends TestBase {
     }
 
     public void assertThatSpaceIsVisible() {
-        String spaceName = Labels.getProp("test_space.name");
+        String spaceName = Constants.TEST_SPACE;
         assertThat(isSpaceWithGivenNameDisplayed(spaceName))
                 .as("Space with name '" + spaceName + "' was not found!")
                 .isTrue();
@@ -60,7 +60,7 @@ public class SpacesSteps extends TestBase {
     }
 
     public void assertThatSpaceIsNotVisible() {
-        String spaceName = Labels.getProp("test_space.name");
+        String spaceName = Constants.TEST_SPACE;
         assertThat(isSpaceWithGivenNameDisplayed(spaceName))
                 .as("Space with name '" + spaceName + "' was found but it should be deleted!")
                 .isFalse();

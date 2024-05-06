@@ -1,6 +1,6 @@
 package com.clickup.gui.steps;
 
-import com.clickup.commons.Labels;
+import com.clickup.commons.Constants;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.SidebarPage;
 import com.clickup.gui.pages.SidebarSpaceCtxPage;
@@ -36,7 +36,7 @@ public class SidebarSteps extends TestBase {
     }
 
     public void clickDeleteSpaceBtn() {
-        String spaceName = Labels.getProp("test_space.name");
+        String spaceName = Constants.TEST_SPACE;
         List<WebElementFacade> allSpaces = sidebarPage.getListOfSpacesWithNames();
 
         Wait.forAllListElementsToBeVisible(allSpaces);

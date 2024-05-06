@@ -10,7 +10,6 @@ import com.clickup.gui.utils.Wait;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 import java.util.List;
-import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -33,7 +32,7 @@ public class TasksSteps extends TestBase {
     }
 
     public void enterTaskName() {
-        String taskName = Labels.getProp("test_task.name");
+        String taskName = Constants.TEST_TASK;
         createTaskModalPage.typeIntoTaskNameField(taskName);
     }
 

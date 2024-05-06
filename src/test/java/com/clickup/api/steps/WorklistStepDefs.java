@@ -14,8 +14,8 @@ public class WorklistStepDefs {
     }
 
     @Then("I receive a HTTP response code {int}")
-    public void i_receive_a_http_response_code(Integer int1) {
-        // TODO: implement
+    public void i_receive_a_http_response_code(Integer responseCode) {
+        ApiService.assertStatusCode(responseCode);
     }
 
     @And("response body contains all created workspaces and their data")
