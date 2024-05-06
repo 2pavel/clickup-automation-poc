@@ -32,4 +32,8 @@ public class PropertiesLoader {
         return loadProperties(Constants.PROP_NAMES_FILE);
     }
 
+    public static Properties loadApiProperties() {
+        return loadProperties(Constants.API_PROPERTIES);
+    }
+
 }

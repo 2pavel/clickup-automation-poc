@@ -12,11 +12,13 @@ import net.serenitybdd.annotations.Step;
 
 import java.util.Base64;
 import java.util.Map;
+import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
 public class AuthService {
 
+    private static Properties api = PropertiesLoader.loadApiProperties();
     private static RequestSpecBuilder requestSpecBuilder;
     private static RequestSpecification currentAuthorization;
 
@@ -25,6 +27,7 @@ public class AuthService {
         requestSpecBuilder = new RequestSpecBuilder()
                 .setBaseUri(Constants.BASE_URL)
                 .setContentType(ContentType.JSON)
+                .addHeader("Authorization", api.getProperty("api_key"))
                 .addFilter(new RequestLoggingFilter())
                 .addFilter(new ResponseLoggingFilter());
         currentAuthorization = requestSpecBuilder.build();
