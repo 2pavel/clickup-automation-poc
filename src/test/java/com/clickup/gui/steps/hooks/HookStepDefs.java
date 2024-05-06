@@ -29,7 +29,7 @@ public class HookStepDefs {
         loginSteps.loginToApplication();
     }
 
-    @After(value = "not @api")
+    @After(value = "not @api and not @user_not_logged_in")
     public void logout() {
         settingsSteps.openUserCtxMenu();
         logoutSteps.clickLogoutBtn();

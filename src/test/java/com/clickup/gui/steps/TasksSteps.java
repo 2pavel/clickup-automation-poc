@@ -38,6 +38,7 @@ public class TasksSteps extends TestBase {
 
     public void clickCreateTaskBtn() {
         createTaskModalPage.clickCreateTaskBtn();
+        toastPage.getGeneralToastTitle().waitUntilVisible();
         List<WebElementFacade> allTasks = projectMainViewPage.getMainViewTasksList();
         Wait.forAllListElementsToBeVisible(allTasks);
     }
@@ -84,7 +85,7 @@ public class TasksSteps extends TestBase {
 
     // ------------ ASSERTIONS ------------
     public void assertThatTaskIsVisible() {
-        String taskName = Labels.getProp("test_task.name");
+        String taskName = Constants.TEST_TASK;
         assertThat(isTaskWithGivenNameDisplayed(taskName))
                 .as("Task with name '" + taskName + "' was not found!")
                 .isTrue();
@@ -97,7 +98,7 @@ public class TasksSteps extends TestBase {
     }
 
     public void assertThatTaskIsNotVisible() {
-        String taskName = Labels.getProp("test_task.name");
+        String taskName = Constants.TEST_TASK;
         assertThat(isTaskWithGivenNameDisplayed(taskName))
                 .as("Task with name '" + taskName + "' was found but it should no longer be visible!")
                 .isFalse();
