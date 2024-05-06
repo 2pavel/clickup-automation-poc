@@ -42,10 +42,10 @@ public class AuthService {
 //        currentAccessToken = null;
 //    }
 
-//    @Step
-//    public static RequestSpecification getCurrentAuthorization() {
-//        return currentAuthorization;
-//    }
+    @Step
+    public static RequestSpecification getCurrentAuthorization() {
+        return currentAuthorization;
+    }
 //
 //    @Step
 //    public static RequestSpecBuilder getRequestSpecBuilder() {

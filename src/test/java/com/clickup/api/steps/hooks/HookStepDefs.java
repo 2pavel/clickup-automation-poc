@@ -1,0 +1,14 @@
+package com.clickup.api.steps.hooks;
+
+import com.clickup.gui.utils.AuthService;
+import io.cucumber.java.BeforeAll;
+
+
+
+public class HookStepDefs {
+
+    @BeforeAll()
+    public void authorize() {
+        AuthService.prepareApiConfiguration();
+    }
+}
