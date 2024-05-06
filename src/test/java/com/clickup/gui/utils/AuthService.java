@@ -1,6 +1,7 @@
 package com.clickup.gui.utils;
 
 import com.clickup.commons.Constants;
+import com.clickup.commons.Endpoints;
 import com.clickup.commons.pojo.CfgUsers;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -25,9 +26,9 @@ public class AuthService {
     @Step
     public static void prepareApiConfiguration() {
         requestSpecBuilder = new RequestSpecBuilder()
-                .setBaseUri(Constants.BASE_URL)
+                .setBaseUri(Endpoints.BASE_URL)
                 .setContentType(ContentType.JSON)
-                .addHeader("Authorization", api.getProperty("api_key"))
+                .addHeader("Authorization", api.getProperty("api_token"))
                 .addFilter(new RequestLoggingFilter())
                 .addFilter(new ResponseLoggingFilter());
         currentAuthorization = requestSpecBuilder.build();

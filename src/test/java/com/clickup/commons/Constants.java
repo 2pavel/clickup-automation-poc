@@ -19,9 +19,6 @@ public class Constants {
     // ------------------ USERS ------------------
     public static final String DEFAULT_USER = "Testerski";
 
-    // ------------------- API -------------------
-    public static final String BASE_URL = "https://api.clickup.com";
-
     // TODO: move prop and label values here
 
 }

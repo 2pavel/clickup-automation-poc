@@ -29,7 +29,7 @@ public class HookStepDefs {
         loginSteps.loginToApplication();
     }
 
-    @After
+    @After(value = "not @api")
     public void logout() {
         settingsSteps.openUserCtxMenu();
         logoutSteps.clickLogoutBtn();
