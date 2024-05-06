@@ -1,6 +1,6 @@
 package com.clickup.api.steps.hooks;
 
-import com.clickup.gui.utils.AuthService;
+import com.clickup.api.utils.AuthService;
 import io.cucumber.java.BeforeAll;
 
 

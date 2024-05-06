@@ -1,4 +1,4 @@
-package com.clickup.gui.utils;
+package com.clickup.api.utils;
 
 import io.restassured.http.ContentType;
 import net.serenitybdd.annotations.Step;
@@ -22,6 +22,11 @@ public class ApiService {
                 .spec(AuthService.getCurrentAuthorization())
                 .contentType(ContentType.JSON)
                 .get(endpoint);
+    }
+
+    @Step
+    public static void assertStatusCode(int statusCode) {
+        SerenityRest.restAssuredThat(response -> response.statusCode(statusCode));
     }
 
 }

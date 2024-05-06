@@ -1,7 +1,7 @@
 package com.clickup.api.steps;
 
 import com.clickup.commons.Endpoints;
-import com.clickup.gui.utils.ApiService;
+import com.clickup.api.utils.ApiService;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

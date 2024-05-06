@@ -1,8 +1,9 @@
-package com.clickup.gui.utils;
+package com.clickup.api.utils;
 
 import com.clickup.commons.Constants;
 import com.clickup.commons.Endpoints;
 import com.clickup.commons.pojo.CfgUsers;
+import com.clickup.gui.utils.PropertiesLoader;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
