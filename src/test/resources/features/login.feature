@@ -1,5 +1,5 @@
 # language: en
-@debug
+
 Feature: Login
 
   @user_not_logged_in # TODO: fix persisting browser instances, issue only without headless mode

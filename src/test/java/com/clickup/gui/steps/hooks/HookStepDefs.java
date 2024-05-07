@@ -7,6 +7,9 @@ import com.clickup.gui.steps.SettingsSteps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.annotations.Steps;
+import org.openqa.selenium.WebDriver;
+
+import java.io.IOException;
 
 import static net.serenitybdd.core.Serenity.getDriver;
 import static net.serenitybdd.core.Serenity.getWebdriverManager;
@@ -38,18 +41,19 @@ public class HookStepDefs {
         settingsSteps.openUserCtxMenu();
         logoutSteps.clickLogoutBtn();
     }
-    // TODO: add GUI tag in features so that we can use: @gui and not @user_not_logged_in
+    // TODO: add GUI tag in features so that we can use: (@gui and not @user_not_logged_in)
 
-//    @After(value = "@user_not_logged_in")
-//    public static void failsafeTeardown() {
-//        WebDriver driver = getWebdriverManager().getCurrentDriver();
-//        if (driver != null) {
-//            driver.quit();
-//            System.out.println("----------------------------------------");
-//            System.out.println("Killed an instance");
-//        }
-//    }
+    @After(value = "@user_not_logged_in")
+    public static void failsafeTeardown() {
+        try {
+            System.out.println("Attempting taskkill");
+            Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     // TODO: figure out why @user_not_logged_in test leaves some instances running
     //  ~~consider adding a hook to manually quit~~ <- that made it even worse
+    //  taskkill solution works for now
 }
