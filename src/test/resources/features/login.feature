@@ -2,7 +2,7 @@
 @debug
 Feature: Login
 
-  @user_not_logged_in # TODO: fix persisting browser instances
+  @user_not_logged_in # TODO: fix persisting browser instances, issue only without headless mode
   Scenario: Navigate to login page
     Given I am on base page
     When I click login button

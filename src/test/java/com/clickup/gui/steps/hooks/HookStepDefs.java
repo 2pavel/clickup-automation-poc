@@ -7,7 +7,6 @@ import com.clickup.gui.steps.SettingsSteps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.annotations.Steps;
-import org.openqa.selenium.WebDriver;
 
 import static net.serenitybdd.core.Serenity.getDriver;
 import static net.serenitybdd.core.Serenity.getWebdriverManager;
@@ -41,16 +40,16 @@ public class HookStepDefs {
     }
     // TODO: add GUI tag in features so that we can use: @gui and not @user_not_logged_in
 
-    @After(value = "@user_not_logged_in")
-    public static void failsafeTeardown() {
-        WebDriver driver = getWebdriverManager().getCurrentDriver();
-        if (driver != null) {
-            driver.quit();
-            System.out.println("----------------------------------------");
-            System.out.println("Killed an instance");
-        }
-    }
+//    @After(value = "@user_not_logged_in")
+//    public static void failsafeTeardown() {
+//        WebDriver driver = getWebdriverManager().getCurrentDriver();
+//        if (driver != null) {
+//            driver.quit();
+//            System.out.println("----------------------------------------");
+//            System.out.println("Killed an instance");
+//        }
+//    }
 
-    // TODO: figure out why using TestRunner leaves some instances running
-    //  consider adding a hook to manually quit
+    // TODO: figure out why @user_not_logged_in test leaves some instances running
+    //  ~~consider adding a hook to manually quit~~ <- that made it even worse
 }
