@@ -24,6 +24,4 @@ public class Constants {
     // ------------------ USERS ------------------
     public static final String DEFAULT_USER = "Testerski";
 
-    // TODO: move prop and label values here
-
 }

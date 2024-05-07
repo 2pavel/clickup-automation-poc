@@ -1,22 +1,15 @@
 package com.clickup.api.utils;
 
-import com.clickup.commons.Constants;
 import com.clickup.commons.Endpoints;
-import com.clickup.commons.pojo.CfgUsers;
 import com.clickup.gui.utils.PropertiesLoader;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.annotations.Step;
 
-import java.util.Base64;
-import java.util.Map;
 import java.util.Properties;
-
-import static io.restassured.RestAssured.given;
 
 public class AuthService {
 
