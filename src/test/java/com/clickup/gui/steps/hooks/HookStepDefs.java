@@ -35,13 +35,12 @@ public class HookStepDefs {
         loginSteps.loginToApplication();
     }
 
-    @After(value = "not @user_not_logged_in")
+    @After(value = "@gui and not @user_not_logged_in")
     public void logout() {
         System.out.println("--- Attempting logout ---");
         settingsSteps.openUserCtxMenu();
         logoutSteps.clickLogoutBtn();
     }
-    // TODO: add GUI tag in features so that we can use: (@gui and not @user_not_logged_in)
 
     @After(value = "@user_not_logged_in")
     public static void failsafeTeardown() {

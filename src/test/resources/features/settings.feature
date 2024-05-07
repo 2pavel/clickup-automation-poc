@@ -1,6 +1,6 @@
 # language: en
 
-@settings
+@gui @settings
 Feature: User settings
 
   Scenario: View user settings page

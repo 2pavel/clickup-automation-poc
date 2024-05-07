@@ -1,5 +1,6 @@
 # language: en
 
+@gui
 Feature: Tasks
 
   Background:

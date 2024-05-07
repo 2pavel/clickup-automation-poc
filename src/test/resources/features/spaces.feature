@@ -1,5 +1,6 @@
 # language: en
 
+@gui
 Feature: Spaces
 
   Background:
