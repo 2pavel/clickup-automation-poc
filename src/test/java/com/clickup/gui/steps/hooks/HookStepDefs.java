@@ -7,12 +7,8 @@ import com.clickup.gui.steps.SettingsSteps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.annotations.Steps;
-import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
-
-import static net.serenitybdd.core.Serenity.getDriver;
-import static net.serenitybdd.core.Serenity.getWebdriverManager;
 
 public class HookStepDefs {
 
@@ -55,4 +51,5 @@ public class HookStepDefs {
     // TODO: figure out why @user_not_logged_in test leaves some instances running
     //  ~~consider adding a hook to manually quit~~ <- that made it even worse
     //  taskkill solution works for now
+    //  make it better and leave this note here for multi-browser implementation
 }
