@@ -52,4 +52,6 @@ public class HookStepDefs {
     //  ~~consider adding a hook to manually quit~~ <- that made it even worse
     //  taskkill solution works for now
     //  make it better and leave this note here for multi-browser implementation
+
+    // TODO: add logger in this class or make a steps class with logger
 }
