@@ -6,7 +6,11 @@ import com.clickup.gui.pages.HomePage;
 import com.clickup.gui.pages.UserCtxPage;
 import com.clickup.gui.pages.UserSettingsPage;
 import com.clickup.gui.utils.CommonMethodsGUI;
-import org.assertj.core.api.SoftAssertions;
+import net.serenitybdd.core.pages.WebElementFacade;
+
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SettingsSteps extends TestBase {
 
@@ -30,10 +34,10 @@ public class SettingsSteps extends TestBase {
     }
 
     public void assertAllPreferenceLabelsAreDisplayed() {
-        // TODO: add assertions
-        SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(Constants.TOAST)
-                .isEqualTo(userSettingsPage.getPreferencesLabels().get(0).getText());
+        List<WebElementFacade> preferenceLabels = userSettingsPage.getPreferencesLabels();
+        List<String> preferenceLabelsText = CommonMethodsGUI.getTextFromListOfElements(preferenceLabels);
+
+        assertThat(preferenceLabelsText.containsAll(Constants.PREFERENCES)).isTrue();
     }
 
 }
