@@ -7,7 +7,7 @@ import io.cucumber.java.BeforeAll;
 
 public class HookStepDefs {
 
-    @BeforeAll()
+    @BeforeAll
     public static void beforeAll() {
         AuthService.prepareApiConfiguration();
     }
