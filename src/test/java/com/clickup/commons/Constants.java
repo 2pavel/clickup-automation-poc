@@ -4,8 +4,6 @@ import java.util.List;
 
 public class Constants {
 
-
-
     // --------------- FILE PATHS ---------------
     public static final String RESOURCES_DIR = "src/test/resources";
     public static final String TESTDATA_DIR = RESOURCES_DIR + "/testdata";
@@ -22,6 +20,10 @@ public class Constants {
 
     // ------------------ USERS ------------------
     public static final String DEFAULT_USER = "Testerski";
+
+    // --------------- BACKEND ID ---------------
+    public static final String UPDATED_TASK_ID = Labels.getProp("updated_task.id");
+    public static final String WORKSPACE_ID = Labels.getProp("team.id");
 
     // ------------- EXPECTED VALUES ------------
     public static final String TEST_SPACE = Labels.getProp("test_space.name");
