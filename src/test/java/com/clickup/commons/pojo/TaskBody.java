@@ -7,6 +7,19 @@ import lombok.Setter;
 @Setter
 public class TaskBody {
 
+    // TODO: this class is probably gonna be unnecessary
+
+    private String name;
+    private String description;
+    private String status;
+    private Integer priority;
+    private Long dueDate;
+    private Boolean dueDateTime;
+    private Integer timeEstimate;
+    private Long startDate;
+    private Boolean startDateTime;
+    private Boolean archived;
+
     TaskBody() {
         this.name = "Api Uptaded Task";
         this.description = "Random description";
@@ -19,16 +32,5 @@ public class TaskBody {
         this.startDateTime = false;
         this.archived = false;
     }
-
-    private String name;
-    private String description;
-    private String status;
-    private Integer priority;
-    private Long dueDate;
-    private Boolean dueDateTime;
-    private Integer timeEstimate;
-    private Long startDate;
-    private Boolean startDateTime;
-    private Boolean archived;
 
 }
