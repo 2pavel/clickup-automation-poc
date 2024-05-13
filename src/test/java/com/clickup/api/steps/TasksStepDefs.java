@@ -15,7 +15,7 @@ public class TasksStepDefs {
     @When("I send a request to update the task")
     public void i_send_a_request_to_update_the_task() {
         ApiService.runPutWithJson(Endpoints.UPDATED_TASK, "{ \"description\": \"Update\" }");
-        // TODO: make it better, handle jsonBody
+        // TODO: make it better, handle jsonBody, add faker
     }
     @Then("response contains updated task description")
     public void response_contains_updated_task_description() {

@@ -11,4 +11,5 @@ public class HookStepDefs {
     public static void beforeAll() {
         AuthService.prepareApiConfiguration();
     }
+
 }
