@@ -15,6 +15,17 @@ public class ApiService {
                 .post(endpoint);
     }
 
+    @Step
+    public static void runPostWithJson(String endpoint, String jsonBody) {
+        SerenityRest
+                .given()
+                .spec(AuthService.getCurrentAuthorization())
+                .contentType(ContentType.JSON)
+                .body(jsonBody)
+                .post(endpoint);
+    }
+
+    @Step
     public static void runPutWithJson(String endpoint, String jsonBody) {
         SerenityRest
                 .given()

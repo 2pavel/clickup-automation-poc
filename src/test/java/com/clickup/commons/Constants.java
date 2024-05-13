@@ -24,6 +24,7 @@ public class Constants {
     // --------------- BACKEND ID ---------------
     public static final String UPDATED_TASK_ID = Labels.getProp("updated_task.id");
     public static final String WORKSPACE_ID = Labels.getProp("team.id");
+    public static final String TEAM_SPACE_ID = Labels.getProp("team_space.id");
 
     // ------------- EXPECTED VALUES ------------
     public static final String TEST_SPACE = Labels.getProp("test_space.name");

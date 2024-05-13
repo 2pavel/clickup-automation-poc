@@ -1,7 +1,6 @@
 package com.clickup.api.steps;
 
 import com.clickup.api.utils.ApiService;
-import com.clickup.commons.Constants;
 import com.clickup.commons.Endpoints;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +14,8 @@ public class TasksStepDefs {
     }
     @When("I send a request to update the task")
     public void i_send_a_request_to_update_the_task() {
-        ApiService.runPutWithJson(Endpoints.TASK + "/" + Constants.UPDATED_TASK_ID, "{ \"description\": \"Updated via cucumber\" }");
+        ApiService.runPutWithJson(Endpoints.UPDATED_TASK, "{ \"description\": \"Update\" }");
+        // TODO: make it better, handle jsonBody
     }
     @Then("response contains updated task description")
     public void response_contains_updated_task_description() {
