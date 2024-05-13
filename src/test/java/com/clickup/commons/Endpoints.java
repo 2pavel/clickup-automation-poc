@@ -9,5 +9,7 @@ public class Endpoints {
     public static final String SPACE = API_V2 + "/space";
     public static final String UPDATED_TASK = TASK + "/" + Constants.UPDATED_TASK_ID;
     public static final String CREATE_FOLDER = SPACE + "/" + Constants.TEAM_SPACE_ID + "/folder";
+    public static final String MY_WORKSPACE = TEAM + "/" + Constants.WORKSPACE_ID;
+    public static final String GOAL = MY_WORKSPACE + "/goal";
 
 }

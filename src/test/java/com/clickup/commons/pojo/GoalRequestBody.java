@@ -16,11 +16,12 @@ public class GoalRequestBody {
     private ArrayList<Integer> owners;
     private String color;
 
-    GoalRequestBody() {
+    public GoalRequestBody() {
         this.name = "Default goal name";
         this.description = "Default goal description";
         this.dueDate = 1747066552000L;
         this.multipleOwners = false;
+        this.owners = new ArrayList<>();
         this.owners.add(68606069);
         this.color = "#32a852";
     }
