@@ -1,5 +1,6 @@
 package com.clickup.api.utils;
 
+import com.clickup.commons.Temp;
 import net.datafaker.Faker;
 import org.json.JSONObject;
 
@@ -13,6 +14,7 @@ public class BodyUtils {
 
     public static String getRandomDescriptionBody() {
         String randomPart = faker.book().title();
+        Temp.updatedTaskDescription = randomPart;
         return "{ \"description\": \"" + randomPart + "\" }";
     }
 

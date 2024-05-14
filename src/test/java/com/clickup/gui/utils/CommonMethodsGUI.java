@@ -90,12 +90,4 @@ public class CommonMethodsGUI {
                 .perform();
     }
 
-    // TODO: only push when this method has no usages
-    public static void yikes(long millis) {
-        try {
-            Thread.sleep(millis);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

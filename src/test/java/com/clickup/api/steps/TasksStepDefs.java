@@ -20,7 +20,7 @@ public class TasksStepDefs {
     }
     @Then("response contains updated task description")
     public void response_contains_updated_task_description() {
-        // TODO:
+        tasksSteps.assertThatTaskWasUpdated();
     }
 
 }
