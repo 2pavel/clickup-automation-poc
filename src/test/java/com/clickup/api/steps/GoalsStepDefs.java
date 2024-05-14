@@ -12,10 +12,10 @@ public class GoalsStepDefs {
     @When("I send a request to create a goal named {string}")
     public void i_send_a_request_to_create_a_goal_named(String goalName) {
         GoalRequestBody goal = new GoalRequestBody();
+        goal.setName(goalName);
         String goalJsonToString = BodyUtils.getBodyFromPojo(goal);
-        ApiService.runPostWithJson(Endpoints.GOAL, goalJsonToString);
 
-        // TODO: improve
+        ApiService.runPostWithJson(Endpoints.GOAL, goalJsonToString);
     }
 
     @Then("the goal is created")
