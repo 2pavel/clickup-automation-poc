@@ -12,6 +12,7 @@ public class FoldersSteps {
     public void checkThatTeamSpaceIsAvailable() {
         ApiService.runGetWithParam(Endpoints.TEAM_SPACES, "archived", "false");
         Response response = SerenityRest.lastResponse();
+
         String responseBody = response.body().toString();
 
         SoftAssertions softly = new SoftAssertions();
