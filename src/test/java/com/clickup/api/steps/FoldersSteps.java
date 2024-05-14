@@ -11,15 +11,14 @@ public class FoldersSteps {
 
     public void checkThatTeamSpaceIsAvailable() {
         ApiService.runGetWithParam(Endpoints.TEAM_SPACES, "archived", "false");
-        Response response = SerenityRest.lastResponse();
 
-        String responseBody = response.body().toString();
+        Response response = SerenityRest.lastResponse();
+        String availableSpaces = response.jsonPath().getString("spaces.name");
 
         SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(responseBody.contains(Constants.TEST_SPACE))
+        softly.assertThat(availableSpaces.contains(Constants.TEAM_SPACE))
                 .as("Team space was not found!")
                 .isTrue();
 
-        // TODO: implement json library and update this
     }
 }

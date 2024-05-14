@@ -29,6 +29,7 @@ public class Constants {
     // ------------- EXPECTED VALUES ------------
     public static final String TEST_SPACE = Labels.getProp("test_space.name");
     public static final String TEST_TASK = Labels.getProp("test_task.name");
+    public static final String TEAM_SPACE = Labels.getProp("team_space.name");
     public static final String TOAST = Labels.getExpected("settings.preferences.toast");
     public static final String ENTER_COMMENTS = Labels.getExpected("settings.preferences.enter_comments");
     public static final String MARKDOWN = Labels.getExpected("settings.preferences.markdown");
