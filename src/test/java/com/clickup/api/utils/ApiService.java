@@ -45,6 +45,16 @@ public class ApiService {
     }
 
     @Step
+    public static void runGetWithParam(String endpoint, String param, String value) {
+        SerenityRest
+                .given()
+                .spec(AuthService.getCurrentAuthorization())
+                .contentType(ContentType.JSON)
+                .queryParam(param, value)
+                .get(endpoint);
+    }
+
+    @Step
     public static void assertStatusCode(int statusCode) {
         SerenityRest.restAssuredThat(response -> response.statusCode(statusCode));
     }

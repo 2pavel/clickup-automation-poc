@@ -5,12 +5,16 @@ import com.clickup.commons.Endpoints;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.annotations.Steps;
 
 public class FoldersStepDefs {
 
+    @Steps
+    FoldersSteps foldersSteps;
+
     @Given("there exists a space")
     public void there_exists_a_space() {
-        // TODO
+        foldersSteps.checkThatTeamSpaceIsAvailable();
     }
 
     @When("I send a request to create a folder named {string}")

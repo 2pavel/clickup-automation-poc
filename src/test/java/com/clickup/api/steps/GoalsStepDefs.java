@@ -14,6 +14,7 @@ public class GoalsStepDefs {
         GoalRequestBody goal = new GoalRequestBody();
         String goalJsonToString = RequestBody.getBodyFromPojo(goal);
         ApiService.runPostWithJson(Endpoints.GOAL, goalJsonToString);
+        // TODO: improve
     }
 
     @Then("the goal is created")
