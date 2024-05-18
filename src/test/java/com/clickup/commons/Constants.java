@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Constants {
 
-    // --------------- FILE PATHS ---------------
+    // ---------------------------- FILE PATHS -----------------------
     public static final String RESOURCES_DIR = "src/test/resources";
     public static final String TESTDATA_DIR = RESOURCES_DIR + "/testdata";
     public static final String ACTORS_FILE = TESTDATA_DIR + "/actors.json";
@@ -14,21 +14,23 @@ public class Constants {
     public static final String EXPECTED_JSON = TESTDATA_DIR + "/expected_json";
     public static final String EXPECTED_FOLDER = EXPECTED_JSON + "/folder.json";
 
-    // ------------ LOCATOR DATA-TEST ------------
+    // -------------------- LOCATOR DATA-TEST --------------------
     public static final String TASK_CTX_DATA_TEST = "[data-test=task-row-menu__ellipsis-v3-button]";
 
-    // -------------- LOCATOR XPATH --------------
+    // ---------------------- LOCATOR XPATH ----------------------
     public static final String PREFERENCES_SECTION_XPATH = ".//h2[contains(text(), 'Preferences')]/parent::header/parent::section";
 
-    // ------------------ USERS ------------------
+    // -------------------------- USERS --------------------------
     public static final String DEFAULT_USER = "Testerski";
 
-    // --------------- BACKEND ID ---------------
+    // ------------------------ BACKEND ID -----------------------
     public static final String UPDATED_TASK_ID = Labels.getProp("updated_task.id");
     public static final String WORKSPACE_ID = Labels.getProp("team.id");
     public static final String TEAM_SPACE_ID = Labels.getProp("team_space.id");
+    public static final String USER_ID = Labels.getProp("user.id");
+    public static final String USERNAME = Labels.getProp("user.name");
 
-    // ------------- EXPECTED VALUES ------------
+    // ---------------------- EXPECTED VALUES --------------------
     public static final String TEST_SPACE = Labels.getProp("test_space.name");
     public static final String TEST_TASK = Labels.getProp("test_task.name");
     public static final String TEAM_SPACE = Labels.getProp("team_space.name");

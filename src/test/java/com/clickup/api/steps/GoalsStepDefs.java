@@ -1,26 +1,22 @@
 package com.clickup.api.steps;
 
-import com.clickup.api.utils.ApiService;
-import com.clickup.api.utils.BodyUtils;
-import com.clickup.commons.Endpoints;
-import com.clickup.commons.pojo.GoalRequestBody;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.annotations.Steps;
 
 public class GoalsStepDefs {
 
+    @Steps
+    GoalsSteps goalsSteps;
+
     @When("I send a request to create a goal named {string}")
     public void i_send_a_request_to_create_a_goal_named(String goalName) {
-        GoalRequestBody goal = new GoalRequestBody();
-        goal.setName(goalName);
-        String goalJsonToString = BodyUtils.getBodyFromPojo(goal);
-
-        ApiService.runPostWithJson(Endpoints.GOAL, goalJsonToString);
+        goalsSteps.createGoal(goalName);
     }
 
     @Then("the goal is created")
     public void the_goal_is_created() {
-        // TODO
+        goalsSteps.checkThatGoalIsCreated();
     }
 
 }
