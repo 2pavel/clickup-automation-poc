@@ -29,11 +29,19 @@ public class FoldersSteps {
 
         ApiService.runPostWithJson(Endpoints.CREATE_FOLDER, body);
 
+        Temp.createdFolderId = SerenityRest.lastResponse().jsonPath().getString("id");
+    }
+
+    public void checkCreatedFolderData() {
+        String createdFolderData = getFolderDataByRecentId();
+    }
+
+    public String getFolderDataByRecentId() {
+        String id = "/" + Temp.createdFolderId;
+        ApiService.runGet(Endpoints.FOLDER + id);
+
         Response response = SerenityRest.lastResponse();
-        Temp.createdFolderId = response.jsonPath().getString("id");
+        return response.getBody().asString();
     }
 
-    public void assertThatFolderDataIsCorrect() {
-
-    }
 }

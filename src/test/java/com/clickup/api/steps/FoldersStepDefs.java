@@ -22,7 +22,7 @@ public class FoldersStepDefs {
 
     @Then("response body contains newly created folder's data")
     public void response_body_contains_newly_created_folder_s_data() {
-        // TODO
+        foldersSteps.checkCreatedFolderData();
     }
 
 }
