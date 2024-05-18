@@ -5,15 +5,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import net.datafaker.Faker;
-import org.json.JSONObject;
 
 public class BodyUtils {
 
     private static Faker faker = new Faker();
-
-//    public static String getBodyFromPojo(Object object) {
-//        return new JSONObject(object).toString();
-//    }
 
     public static String getBodyFromPojo(Object object) {
         ObjectWriter ow = new ObjectMapper().writerWithDefaultPrettyPrinter();
