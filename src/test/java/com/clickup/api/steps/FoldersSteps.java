@@ -10,6 +10,9 @@ import net.serenitybdd.rest.SerenityRest;
 import org.assertj.core.api.SoftAssertions;
 
 import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
+import static net.javacrumbs.jsonunit.core.ConfigurationWhen.paths;
+import static net.javacrumbs.jsonunit.core.ConfigurationWhen.then;
+import static net.javacrumbs.jsonunit.core.Option.IGNORING_VALUES;
 
 public class FoldersSteps {
 
@@ -36,9 +39,11 @@ public class FoldersSteps {
 
     public void checkCreatedFolderData() {
         String createdFolderData = getFolderDataByRecentId();
-        String expectedFolderData = BodyUtils.getJsonAsString(Constants.GOAL_JSON);
+        String expectedFolderData = BodyUtils.getJsonAsString(Constants.FOLDER_JSON);
 
-
+        assertThatJson(createdFolderData)
+                .when(paths("id", "orderindex"), then(IGNORING_VALUES))
+                .isEqualTo(expectedFolderData);
     }
 
     public String getFolderDataByRecentId() {

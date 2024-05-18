@@ -1,0 +1,39 @@
+{
+  "id": "90153203672",
+  "name": "TestFolder",
+  "orderindex": 2,
+  "override_statuses": false,
+  "hidden": false,
+  "space": {
+    "id": "90151890243",
+    "name": "Team Space",
+    "access": true
+  },
+  "task_count": "0",
+  "archived": false,
+  "statuses": [
+    {
+      "id": "p90151890243_p90100401420_p32280339_syqLtYOY",
+      "status": "complete",
+      "orderindex": 2,
+      "color": "#008844",
+      "type": "closed"
+    },
+    {
+      "id": "p90151890243_p90100401420_p32280339_g9uxhsQM",
+      "status": "in progress",
+      "orderindex": 1,
+      "color": "#1090e0",
+      "type": "custom"
+    },
+    {
+      "id": "p90151890243_p90100401420_p32280339_DCnaeiSB",
+      "status": "to do",
+      "orderindex": 0,
+      "color": "#87909e",
+      "type": "open"
+    }
+  ],
+  "lists": [],
+  "permission_level": "create"
+}
