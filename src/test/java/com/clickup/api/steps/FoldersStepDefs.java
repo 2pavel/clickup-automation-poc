@@ -1,7 +1,5 @@
 package com.clickup.api.steps;
 
-import com.clickup.api.utils.ApiService;
-import com.clickup.commons.Endpoints;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -19,7 +17,7 @@ public class FoldersStepDefs {
 
     @When("I send a request to create a folder named {string}")
     public void i_send_a_request_to_create_a_folder_named(String folderName) {
-        ApiService.runPostWithJson(Endpoints.CREATE_FOLDER, "{ \"name\": \"" + folderName + "\" }");
+        foldersSteps.createFolder(folderName);
     }
 
     @Then("response body contains newly created folder's data")
