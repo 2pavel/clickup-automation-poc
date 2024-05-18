@@ -39,7 +39,7 @@ public class FoldersSteps {
 
     public void checkCreatedFolderData() {
         String createdFolderData = getFolderDataByRecentId();
-        String expectedFolderData = BodyUtils.getJsonAsString(Constants.FOLDER_JSON);
+        String expectedFolderData = BodyUtils.getJsonAsString(Constants.EXPECTED_FOLDER);
 
         assertThatJson(createdFolderData)
                 .when(paths("id", "orderindex"), then(IGNORING_VALUES))
