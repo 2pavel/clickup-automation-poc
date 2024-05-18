@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import net.datafaker.Faker;
 
+import java.io.File;
+import java.io.IOException;
+
 public class BodyUtils {
 
     private static Faker faker = new Faker();
@@ -27,6 +30,16 @@ public class BodyUtils {
 
     public static String getSingleFieldBody(String fieldName, String value) {
         return "{ \"" + fieldName + "\": \"" + value + "\" }";
+    }
+
+    public static String getJsonAsString(String path) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Object json = mapper.readValue(new File(path), Object.class);
+            return mapper.writeValueAsString(json);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

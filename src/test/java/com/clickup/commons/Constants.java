@@ -11,6 +11,7 @@ public class Constants {
     public static final String EN_LANG_FILE = TESTDATA_DIR + "/en_EN.properties";
     public static final String PROP_NAMES_FILE = TESTDATA_DIR + "/testprops.properties";
     public static final String API_PROPERTIES = RESOURCES_DIR + "/api.properties";
+    public static final String GOAL_JSON = TESTDATA_DIR + "/temporary.json"; // TODO
 
     // ------------ LOCATOR DATA-TEST ------------
     public static final String TASK_CTX_DATA_TEST = "[data-test=task-row-menu__ellipsis-v3-button]";

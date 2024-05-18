@@ -9,6 +9,8 @@ import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import org.assertj.core.api.SoftAssertions;
 
+import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
+
 public class FoldersSteps {
 
     public void checkThatTeamSpaceIsAvailable() {
@@ -34,6 +36,9 @@ public class FoldersSteps {
 
     public void checkCreatedFolderData() {
         String createdFolderData = getFolderDataByRecentId();
+        String expectedFolderData = BodyUtils.getJsonAsString(Constants.GOAL_JSON);
+
+
     }
 
     public String getFolderDataByRecentId() {
