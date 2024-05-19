@@ -1,7 +1,6 @@
 package com.clickup.gui.steps;
 
 import com.clickup.commons.Constants;
-import com.clickup.commons.Labels;
 import com.clickup.commons.Temp;
 import com.clickup.gui.TestBase;
 import com.clickup.gui.pages.*;

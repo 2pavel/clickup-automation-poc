@@ -28,20 +28,9 @@ public class AuthService {
         currentAuthorization = requestSpecBuilder.build();
     }
 
-//    @Step
-//    public static void removeCurrentAuthorization() {
-//        requestSpecBuilder = null;
-//        currentAuthorization = null;
-//    }
-
     @Step
     public static RequestSpecification getCurrentAuthorization() {
         return currentAuthorization;
     }
-
-//    @Step
-//    public static RequestSpecBuilder getRequestSpecBuilder() {
-//        return requestSpecBuilder;
-//    }
 
 }
