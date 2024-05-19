@@ -27,6 +27,7 @@ public class TasksSteps {
 
     public void assertThatTaskWasUpdated() {
         ApiService.runGet(Endpoints.UPDATED_TASK);
+
         Response response = SerenityRest.lastResponse();
         String receivedDescription = response.jsonPath().getString("description");
 

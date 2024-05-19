@@ -13,6 +13,7 @@ public class Constants {
     public static final String API_PROPERTIES = RESOURCES_DIR + "/api.properties";
     public static final String EXPECTED_JSON = TESTDATA_DIR + "/expected_json";
     public static final String EXPECTED_FOLDER = EXPECTED_JSON + "/folder.json";
+    public static final String EXPECTED_WORKSPACES = EXPECTED_JSON + "/workspaces.json";
 
     // -------------------- LOCATOR DATA-TEST --------------------
     public static final String TASK_CTX_DATA_TEST = "[data-test=task-row-menu__ellipsis-v3-button]";

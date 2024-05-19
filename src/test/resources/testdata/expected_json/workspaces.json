@@ -1,0 +1,362 @@
+{
+  "spaces": [
+    {
+      "id": "90151890243",
+      "name": "Team Space",
+      "color": "#03A2FD",
+      "private": false,
+      "avatar": null,
+      "admin_can_manage": true,
+      "statuses": [
+        {
+          "id": "p90151890243_p90100401420_p32280339_DCnaeiSB",
+          "status": "to do",
+          "type": "open",
+          "orderindex": 0,
+          "color": "#87909e"
+        },
+        {
+          "id": "p90151890243_p90100401420_p32280339_g9uxhsQM",
+          "status": "in progress",
+          "type": "custom",
+          "orderindex": 1,
+          "color": "#1090e0"
+        },
+        {
+          "id": "p90151890243_p90100401420_p32280339_syqLtYOY",
+          "status": "complete",
+          "type": "closed",
+          "orderindex": 2,
+          "color": "#008844"
+        }
+      ],
+      "multiple_assignees": true,
+      "features": {
+        "due_dates": {
+          "enabled": true,
+          "start_date": true,
+          "remap_due_dates": false,
+          "remap_closed_due_date": false
+        },
+        "sprints": {
+          "enabled": false
+        },
+        "time_tracking": {
+          "enabled": true,
+          "harvest": false,
+          "rollup": false,
+          "default_to_billable": 2
+        },
+        "points": {
+          "enabled": false
+        },
+        "custom_items": {
+          "enabled": false
+        },
+        "priorities": {
+          "enabled": true,
+          "priorities": [
+            {
+              "color": "#f50000",
+              "id": "1",
+              "orderindex": "1",
+              "priority": "urgent"
+            },
+            {
+              "color": "#f8ae00",
+              "id": "2",
+              "orderindex": "2",
+              "priority": "high"
+            },
+            {
+              "color": "#6fddff",
+              "id": "3",
+              "orderindex": "3",
+              "priority": "normal"
+            },
+            {
+              "color": "#d8d8d8",
+              "id": "4",
+              "orderindex": "4",
+              "priority": "low"
+            }
+          ]
+        },
+        "tags": {
+          "enabled": true
+        },
+        "check_unresolved": {
+          "enabled": true,
+          "subtasks": null,
+          "checklists": null,
+          "comments": null
+        },
+        "zoom": {
+          "enabled": true
+        },
+        "milestones": {
+          "enabled": false
+        },
+        "custom_fields": {
+          "enabled": true
+        },
+        "dependency_warning": {
+          "enabled": true
+        },
+        "status_pies": {
+          "enabled": false
+        },
+        "multiple_assignees": {
+          "enabled": true
+        }
+      },
+      "archived": false
+    },
+    {
+      "id": "90151941092",
+      "name": "Rook",
+      "color": "#c580e6",
+      "private": false,
+      "avatar": null,
+      "admin_can_manage": false,
+      "statuses": [
+        {
+          "id": "p90151941092_ZToss8Dn",
+          "status": "to do",
+          "type": "open",
+          "orderindex": 0,
+          "color": "#87909e"
+        },
+        {
+          "id": "p90151941092_LoRy4cMu",
+          "status": "in progress",
+          "type": "custom",
+          "orderindex": 1,
+          "color": "#5f55ee"
+        },
+        {
+          "id": "p90151941092_XXi66CvV",
+          "status": "complete",
+          "type": "closed",
+          "orderindex": 2,
+          "color": "#008844"
+        }
+      ],
+      "multiple_assignees": true,
+      "features": {
+        "due_dates": {
+          "enabled": true,
+          "start_date": true,
+          "remap_due_dates": true,
+          "remap_closed_due_date": false
+        },
+        "sprints": {
+          "enabled": false
+        },
+        "time_tracking": {
+          "enabled": true,
+          "harvest": false,
+          "rollup": true,
+          "default_to_billable": 2
+        },
+        "points": {
+          "enabled": false
+        },
+        "custom_items": {
+          "enabled": false
+        },
+        "priorities": {
+          "enabled": true,
+          "priorities": [
+            {
+              "color": "#f50000",
+              "id": "1",
+              "orderindex": "1",
+              "priority": "urgent"
+            },
+            {
+              "color": "#f8ae00",
+              "id": "2",
+              "orderindex": "2",
+              "priority": "high"
+            },
+            {
+              "color": "#6fddff",
+              "id": "3",
+              "orderindex": "3",
+              "priority": "normal"
+            },
+            {
+              "color": "#d8d8d8",
+              "id": "4",
+              "orderindex": "4",
+              "priority": "low"
+            }
+          ]
+        },
+        "tags": {
+          "enabled": true
+        },
+        "time_estimates": {
+          "enabled": true,
+          "rollup": true,
+          "per_assignee": false
+        },
+        "check_unresolved": {
+          "enabled": true,
+          "subtasks": null,
+          "checklists": null,
+          "comments": null
+        },
+        "zoom": {
+          "enabled": false
+        },
+        "milestones": {
+          "enabled": true
+        },
+        "custom_fields": {
+          "enabled": true
+        },
+        "remap_dependencies": {
+          "enabled": true
+        },
+        "dependency_warning": {
+          "enabled": true
+        },
+        "status_pies": {
+          "enabled": true
+        },
+        "multiple_assignees": {
+          "enabled": true
+        },
+        "emails": {
+          "enabled": true
+        }
+      },
+      "archived": false
+    },
+    {
+      "id": "90151965778",
+      "name": "Knight",
+      "color": "#6a85ff",
+      "private": false,
+      "avatar": null,
+      "admin_can_manage": false,
+      "statuses": [
+        {
+          "id": "p90151965778_aaknzBDW",
+          "status": "to do",
+          "type": "open",
+          "orderindex": 0,
+          "color": "#87909e"
+        },
+        {
+          "id": "p90151965778_VD9Zk3O2",
+          "status": "in progress",
+          "type": "custom",
+          "orderindex": 1,
+          "color": "#5f55ee"
+        },
+        {
+          "id": "p90151965778_W5W7xzAE",
+          "status": "complete",
+          "type": "closed",
+          "orderindex": 2,
+          "color": "#008844"
+        }
+      ],
+      "multiple_assignees": true,
+      "features": {
+        "due_dates": {
+          "enabled": true,
+          "start_date": true,
+          "remap_due_dates": true,
+          "remap_closed_due_date": false
+        },
+        "sprints": {
+          "enabled": false
+        },
+        "time_tracking": {
+          "enabled": true,
+          "harvest": false,
+          "rollup": true,
+          "default_to_billable": 2
+        },
+        "points": {
+          "enabled": false
+        },
+        "custom_items": {
+          "enabled": false
+        },
+        "priorities": {
+          "enabled": true,
+          "priorities": [
+            {
+              "color": "#f50000",
+              "id": "1",
+              "orderindex": "1",
+              "priority": "urgent"
+            },
+            {
+              "color": "#f8ae00",
+              "id": "2",
+              "orderindex": "2",
+              "priority": "high"
+            },
+            {
+              "color": "#6fddff",
+              "id": "3",
+              "orderindex": "3",
+              "priority": "normal"
+            },
+            {
+              "color": "#d8d8d8",
+              "id": "4",
+              "orderindex": "4",
+              "priority": "low"
+            }
+          ]
+        },
+        "tags": {
+          "enabled": true
+        },
+        "time_estimates": {
+          "enabled": true,
+          "rollup": true,
+          "per_assignee": false
+        },
+        "check_unresolved": {
+          "enabled": true,
+          "subtasks": null,
+          "checklists": null,
+          "comments": null
+        },
+        "zoom": {
+          "enabled": false
+        },
+        "milestones": {
+          "enabled": true
+        },
+        "custom_fields": {
+          "enabled": true
+        },
+        "remap_dependencies": {
+          "enabled": true
+        },
+        "dependency_warning": {
+          "enabled": true
+        },
+        "status_pies": {
+          "enabled": true
+        },
+        "multiple_assignees": {
+          "enabled": true
+        },
+        "emails": {
+          "enabled": true
+        }
+      },
+      "archived": false
+    }
+  ]
+}

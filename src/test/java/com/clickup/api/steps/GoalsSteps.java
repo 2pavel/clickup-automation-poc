@@ -30,9 +30,9 @@ public class GoalsSteps {
         assertThatJson(
                 createdGoalData,
                 body -> body.inPath("goal.creator").isIntegralNumber().isEqualTo(Constants.USER_ID),
-                body -> body.inPath("goal.owners..username").isArray().contains(Constants.USERNAME)
+                body -> body.inPath("goal.owners..username").isArray().contains(Constants.USERNAME),
+                body -> body.inPath("goal.folder_id").isNull()
         );
-        // TODO: consider making this better, check negative result
     }
 
     public String getGoalDataByRecentId() {

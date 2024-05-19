@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.rest.SerenityRest;
 
+import java.util.Map;
+
 public class ApiService {
 
     @Step
@@ -51,6 +53,16 @@ public class ApiService {
                 .spec(AuthService.getCurrentAuthorization())
                 .contentType(ContentType.JSON)
                 .queryParam(param, value)
+                .get(endpoint);
+    }
+
+    @Step
+    public static void runGetWithParamsMap(String endpoint, Map<String, String> params) {
+        SerenityRest
+                .given()
+                .spec(AuthService.getCurrentAuthorization())
+                .contentType(ContentType.JSON)
+                .queryParams(params)
                 .get(endpoint);
     }
 
