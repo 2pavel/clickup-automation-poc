@@ -43,4 +43,11 @@ public class GoalsSteps {
         Response response = SerenityRest.lastResponse();
         return response.getBody().asString();
     }
+
+    public static void deleteTestGoal() {
+        if (Temp.createdGoalId != null) {
+            String id = "/" + Temp.createdGoalId;
+            ApiService.runDelete(Endpoints.GOAL + id);
+        }
+    }
 }

@@ -67,6 +67,15 @@ public class ApiService {
     }
 
     @Step
+    public static void runDelete(String endpoint) {
+        SerenityRest
+                .given()
+                .spec(AuthService.getCurrentAuthorization())
+                .contentType(ContentType.JSON)
+                .delete(endpoint);
+    }
+
+    @Step
     public static void assertStatusCode(int statusCode) {
         SerenityRest.restAssuredThat(response -> response.statusCode(statusCode));
     }

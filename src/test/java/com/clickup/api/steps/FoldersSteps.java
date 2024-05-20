@@ -37,6 +37,13 @@ public class FoldersSteps {
         Temp.createdFolderId = SerenityRest.lastResponse().jsonPath().getString("id");
     }
 
+    public static void deleteTestFolder() {
+        if (Temp.createdFolderId != null) {
+            String id = "/" + Temp.createdFolderId;
+            ApiService.runDelete(Endpoints.FOLDER + id);
+        }
+    }
+
     public void checkCreatedFolderData() {
         String createdFolderData = getFolderDataByRecentId();
         String expectedFolderData = BodyUtils.getJsonAsString(Constants.EXPECTED_FOLDER);
