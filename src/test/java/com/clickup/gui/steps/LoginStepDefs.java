@@ -1,5 +1,6 @@
 package com.clickup.gui.steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
@@ -29,4 +30,8 @@ public class LoginStepDefs {
         loginSteps.assertThatHomePageIsDisplayed();
     }
 
+    @And("I attempt to log in with no credentials")
+    public void i_attempt_to_log_in_with_no_credentials() {
+        loginSteps.clickLogin();
+    }
 }

@@ -7,6 +7,7 @@ Feature: Login
   Scenario: Navigate to login page
     Given I am on base page
     When I click login button
+    And I attempt to log in with no credentials
     Then login form is displayed
 
   Scenario: Log in

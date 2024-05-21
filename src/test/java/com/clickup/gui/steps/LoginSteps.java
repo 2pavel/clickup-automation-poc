@@ -43,6 +43,10 @@ public class LoginSteps extends TestBase {
         loginPage.getPasswordField().type(password);
     }
 
+    public void clickLogin() {
+        loginPage.clickLogin();
+    }
+
     public void assertThatLoginFormIsDisplayed() {
         log().info("Checking if login form is displayed");
         assertThat(loginPage.getLoginMainForm().isDisplayed())

@@ -7,8 +7,10 @@ import com.clickup.gui.steps.SettingsSteps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import net.serenitybdd.annotations.Steps;
+import net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 public class HookStepDefs {
 
@@ -33,9 +35,15 @@ public class HookStepDefs {
 
     @After(value = "@gui and not @user_not_logged_in")
     public void logout() {
-        System.out.println("--- Attempting logout ---");
-        settingsSteps.openUserCtxMenu();
-        logoutSteps.clickLogoutBtn();
+        System.out.println("===== Attempting logout =====");
+        try {
+            settingsSteps.openUserCtxMenu();
+            logoutSteps.clickLogoutBtn();
+        } catch (NoSuchElementException e) {
+            System.out.println("===== No user avatar found, skipping logout =====");
+        } catch (ElementShouldBeEnabledException e) {
+            System.out.println("===== User ctx menu not enabled, skipping logout =====");
+        }
     }
 
     @After(value = "@user_not_logged_in")

@@ -22,6 +22,7 @@ public class SettingsSteps extends TestBase {
 
     public void openUserCtxMenu() {
         homePage.clickUserAvatar();
+        // TODO: FLAKY! Fix this.
         // TODO: move to a new class for top bar actions
     }
 
