@@ -97,6 +97,8 @@ public class TasksSteps extends TestBase {
     }
 
     public void assertThatTaskIsNotVisible() {
+        // TODO: flaky
+
         String taskName = Constants.TEST_TASK;
         assertThat(isTaskWithGivenNameDisplayed(taskName))
                 .as("Task with name '" + taskName + "' was found but it should no longer be visible!")

@@ -13,6 +13,7 @@ public class SettingsStepDefs {
     public void i_click_on_settings_button_in_user_context_menu() {
         settingsSteps.openUserCtxMenu();
         settingsSteps.openUserSettingsPage();
+        // TODO: flaky
     }
     @Then("All preference toggles are displayed")
     public void all_preference_toggles_are_displayed() {

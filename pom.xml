@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>4.1.10</serenity.version>
         <junit.version>5.9.3</junit.version>
-<!--        <webdriver.base.url></webdriver.base.url>-->
+        <webdriver.base.url></webdriver.base.url>
     </properties>
 
     <dependencies>
